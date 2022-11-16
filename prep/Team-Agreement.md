@@ -18,6 +18,10 @@
   * daily stand-ups and mid-day meetings to discuss the progress achieved and any hiccups
 
 * Brooke
+  * strengths: flexibility, attention to detail
+  * I plan to contribute by being able to adapt to the different ideas the group comes up with. I also think I can help with my debugging skills. I have good attention to detail, and I think this helps me debug code.
+  * I would like to get better at writing reusable code. Sometimes I write too much code in one function or component. If I were to break up some of the code, it would be more reusable and also easier to understand.
+  * Doing good stand-ups and code reviews are helpful for understanding all parts of the project
 
 * David
 
