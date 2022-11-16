@@ -1,7 +1,7 @@
 # Project Prep 2
 
 ## Idea 1
-This project is an event planning application. A venue can create an account as the venue owner, and add the different rooms available at the venue. Then event hosts can create an account and view available rooms. They can book events create a guest list. The guests can RSVP and provide their information. Once the guests RSVP, the host can use the information about the room provided by the venue (tables, maximum number of people, etc) to plan the event.
+This project is an event planning application. A venue can create an account as the venue owner, and add the different rooms available at the venue. Then event hosts can create an account and view available rooms. They can book events and create a guest list for the event. The guests can RSVP and provide their information. Once the guests RSVP, the host can use the information about the room provided by the venue (tables, maximum number of people, etc) to plan the event.
 
 This application solves the pain point of both showcasing availability for venues, but mostly helping event planners. The application helps an event host see who has RSVPed to the event and then helps manage and seat them. By having the the information provided by venues, they can seat and preplan an event online. It also helps manage the guest list, by showing who is invited and then of those guests, who plans on attending.
 
