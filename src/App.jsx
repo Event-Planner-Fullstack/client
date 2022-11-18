@@ -2,9 +2,9 @@
 'use strict'
 
 import React from 'react';
-import Header from './src/Header'
-import Footer from './src/Footer';
-import Login from './src/Login';
+import Header from './Header/index'
+import Footer from './Footer/index';
+import Login from './Login/index';
 
 
 const App = () => {
