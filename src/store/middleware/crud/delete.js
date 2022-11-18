@@ -15,7 +15,7 @@ const deleteRequest = async (token, endpoint) => {
       url: `${process.env.REACT_APP_SERVER}/${endpoint}`,
       headers: { "Authorization": `Bearer ${token}` },
     });
-    return response.data[0];
+    return response.data;
 
   } catch (e) { console.log(e) }
 }
