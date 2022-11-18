@@ -1,18 +1,15 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import store from './store';
-import Header from './Header'
-import Footer from './Footer';
-import Login from './Login';
+import Main from './Main';
+
 
 
 const App = () => {
 
   return (
     <Provider store={store}>
-      <Header />
-      <Login />
-      <Footer />
+      <Main/>
     </Provider>
   );
 };
