@@ -1,7 +1,11 @@
+import Button from 'react-bootstrap/Button';
+
 const Login = () => {
 
   return (
-    <header>TEST</header>
+    <>
+      <Button variant="primary">login</Button>{' '}
+    </>
   );
 };
 
