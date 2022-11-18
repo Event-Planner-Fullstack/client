@@ -8,8 +8,6 @@ import event from './event';
 const rootReducer = combineReducers({
   user,
   modals,
-  event,
-  venue,
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
