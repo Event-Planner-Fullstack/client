@@ -1,8 +1,10 @@
 'use strict';
 
 import React from 'react';
+import GuestRSVP from '../Forms/guestRSVP';
 import Button from 'react-bootstrap/Button';
-import { Card, ListGroup } from 'react-bootstrap/esm';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 const Login = () => {
 
@@ -18,7 +20,7 @@ const Login = () => {
             <Button variant="outline-primary">Log in</Button>
             <Button variant="outline-info">Sign in</Button>
           </ListGroup.Item>
-          <Button variant="outline-success">RSVP?</Button>
+          <GuestRSVP />
         </Card.Body>
       </Card>
     </div>
