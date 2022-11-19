@@ -10,9 +10,8 @@ function GuestRSVP() {
     <>
       <div
         className="d-flex align-items-center justify-content-center"
-        style={{ height: "100vh" }}
       >
-        <Button variant="primary" onClick={handleShow}>
+        <Button variant="outline-success" onClick={handleShow}>
           RSVP
         </Button>
       </div>
