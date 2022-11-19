@@ -10,6 +10,7 @@ function getCreatePayload(obj) {
 
 const createRequest = async (token, endpoint, body) => {
   try {
+    console.log(body);
     const response = await axios({
       method: 'post',
       url: `${process.env.REACT_APP_SERVER}/${endpoint}`,

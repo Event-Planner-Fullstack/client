@@ -14,6 +14,7 @@ const reducer = (state = initialState, action) => {
       return { ...state, guest_modal: showGuestModal };
     case 'add_venue_modal':
       const showAddVenue = state.add_venue_modal ? false : true;
+      console.log(showAddVenue);
       return { ...state, add_venue_modal: showAddVenue };
     case 'edit_venue_modal':
       const showEditVenue = state.edit_venue_modal ? false : true;
