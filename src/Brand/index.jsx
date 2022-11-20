@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
-import Logo from '../Images/logo.png';
+import Logo from '../Images/table.png';
 
 import './Brand.scss';
 
@@ -14,18 +14,18 @@ const Brand = () => {
       <Container fluid>
         <Container className="d-flex align-items-center p-2"
           style={{
-            border: " 2px solid red"
+            // border: " 2px solid red"
           }}
         >
-          <Image className=""
+          <Image className="img-thumbnail"
             src={Logo}
             alt='brand logo'
-            width='64px'
-            height='64px'
+            width='128px'
+            height='128px'
           />
           <Row className="m-3"
             style={{
-              border: " 2px solid red",
+              // border: " 2px solid red",
               height: "20vh",
               fontSize: "5rem",
               fontFamily: "Yellowtail"
@@ -33,7 +33,11 @@ const Brand = () => {
             Event Planner
           </Row>
         </Container>
-        <Row style={{ border: " 2px solid red", height: "70vh" }} >
+        <Row
+          style={{
+            // border: " 2px solid red",
+            height: "70vh"
+          }} >
           {loremIpsum}
           {loremIpsum}
         </Row>
