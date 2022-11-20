@@ -1,8 +1,8 @@
-import './index.scss';
+import './RSVP.scss';
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 
-function GuestRSVP() {
+function RSVP() {
   const [showModal, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -34,4 +34,4 @@ function GuestRSVP() {
   );
 }
 
-export default GuestRSVP;
+export default RSVP;
