@@ -1,0 +1,24 @@
+$font: 'Proxima Nova', sans-serif;
+$pri-color: white;
+
+@mixin background {
+  background-image: linear-gradient(rgba(68, 56, 65, 0.28), rgba(68, 56, 65, 0.28)),
+    url('https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg');
+  background-size: cover;
+}
+
+.page {
+  @include background;
+  font-family: $font;
+  color: $pri-color;
+  display: flex;
+  border: 3px solid green;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 98vh;
+  border: 3px solid orange;
+}

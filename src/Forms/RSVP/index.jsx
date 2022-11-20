@@ -1,6 +1,8 @@
-import './RSVP.scss';
 import React, { useState } from "react";
-import { Modal, Button } from "react-bootstrap";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import './RSVP.scss';
 
 function RSVP() {
   const [showModal, setShow] = useState(false);
@@ -8,28 +10,28 @@ function RSVP() {
   const handleShow = () => setShow(true);
   return (
     <>
-      <div
+      <Container
         className="d-flex align-items-center justify-content-center"
       >
         <Button variant="outline-success" onClick={handleShow}>
           RSVP
         </Button>
-      </div>
 
-      <Modal show={showModal} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Guest Modal</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>**insert form**</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
+        <Modal show={showModal} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Guest Modal</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>**insert form**</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={handleClose}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </Container>
     </>
   );
 }
