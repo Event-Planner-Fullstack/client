@@ -4,6 +4,7 @@ import RSVP from '../../Forms/RSVP';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Brand from '../../Brand';
 import './Login.scss';
 
 const Login = () => {
@@ -13,12 +14,7 @@ const Login = () => {
       <Container fluid className="splash">
         <Row className="page">
           <Col className="brand">
-            <Row style={{ border: " 2px solid red" }}>
-              eventplanner
-            </Row>
-            <Row style={{ border: " 2px solid red" }} >
-              <p>eventplanner</p>
-            </Row>
+            <Brand />
           </Col>
           <Col xs={4} className="login">
             <UserForm />

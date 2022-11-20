@@ -1,6 +1,8 @@
 $font: 'Proxima Nova', sans-serif;
 $pri-color: white;
 
+@import url('https://fonts.googleapis.com/css2?family=Rochester&family=Yellowtail&display=swap');
+
 @mixin background {
   background-image:
     linear-gradient(rgba(68, 56, 65, 0.28),

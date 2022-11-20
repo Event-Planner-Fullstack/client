@@ -10,10 +10,8 @@ function RSVP() {
   const handleShow = () => setShow(true);
   return (
     <>
-      <Container
-        className="d-flex align-items-center justify-content-center"
-      >
-        <Button variant="outline-success" onClick={handleShow}>
+      <Container className="d-grid gap-2">
+        <Button variant="success" size="lg" onClick={handleShow}>
           RSVP
         </Button>
 
