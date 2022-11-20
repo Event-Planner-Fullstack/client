@@ -1,4 +1,4 @@
-import Header from './Header';
+// import Header from './Header';
 import Footer from './Footer';
 import Login from './Login';
 import { When } from 'react-if';
@@ -10,7 +10,7 @@ const Main = () => {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
 
       <When condition={!user.isAuthenticated}><Login /></When>
 
