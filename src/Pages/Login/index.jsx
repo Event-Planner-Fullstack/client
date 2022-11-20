@@ -10,15 +10,22 @@ const Login = () => {
 
   return (
     <>
-      <Row className="page">
-        <Col>
-          <p>helloworld</p>
-        </Col>
-        <Col xs={4} className="login">
-          <UserForm />
-          <RSVP />
-        </Col>
-      </Row>
+      <Container fluid className="splash">
+        <Row className="page">
+          <Col className="brand">
+            <Row style={{ border: " 2px solid red" }}>
+              eventplanner
+            </Row>
+            <Row style={{ border: " 2px solid red" }} >
+              <p>eventplanner</p>
+            </Row>
+          </Col>
+          <Col xs={4} className="login">
+            <UserForm />
+            <RSVP />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };
