@@ -1,5 +1,5 @@
 :root {
-    --clr: #ffffff;
+    --clr: rgb(58, 136, 145);
 }
 
 img {
@@ -10,7 +10,7 @@ img {
     position: relative;
     width: 100%;
     height: 50px;
-    background-color: rgb(202, 168, 109);
+    background-color: #F2DEBA;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,9 +55,17 @@ img {
     transform: translateY(33px); 
 }
 
+.navigation ul li.active:hover a .icon {
+    transform: translateY(33px); 
+}
+
+.navigation ul li:hover a .icon {
+    transform: translateY(3px); 
+}
+
 .navigation ul li a .text {
     position: absolute;
-    color: var(--clr);
+    color: black;
     font-weight: 400em;
     letter-spacing: 0.05em;
     transition: .45s;
@@ -76,24 +84,24 @@ img {
     left: 79px;
     width: 60px;
     height: 60px;
-    background: rgb(12, 208, 35);
+    background: #F2DEBA;
     border-radius: 40%;
     border: 6px solid var(--clr);
     transition: .3s; 
 }
 
-.navigation ul li:nth-child(1):hover ~ .indicator {
+.navigation ul li:nth-child(1).active ~ .indicator {
     transform: translateX(calc(150px * 0));   
 }
-.navigation ul li:nth-child(2):hover ~ .indicator {
+
+.navigation ul li:nth-child(2).active ~ .indicator {
     transform: translateX(calc(150px * 1));
 }
-.navigation ul li:nth-child(3):hover ~ .indicator {
+
+.navigation ul li:nth-child(3).active ~ .indicator {
     transform: translateX(calc(150px * 2));
 }
-.navigation ul li:nth-child(4):hover ~ .indicator {
+
+.navigation ul li:nth-child(4).active ~ .indicator {
     transform: translateX(calc(150px * 3));
-}
-.navigation ul li:nth-child(5):hover ~ .indicator {
-    transform: translateX(calc(150px * 4));
 }
