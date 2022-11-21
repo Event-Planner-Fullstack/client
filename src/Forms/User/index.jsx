@@ -13,7 +13,7 @@ const LoginForm = () => {
           <Nav.Item>
             <Nav.Link>Login</Nav.Link>
           </Nav.Item>
-          <Nav.Item>
+          <Nav.Item>n
             <Nav.Link>Signup</Nav.Link>
           </Nav.Item>
         </Nav>

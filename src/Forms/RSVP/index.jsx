@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import './RSVP.scss';
 
 function RSVP() {
   const [showModal, setShow] = useState(false);
@@ -14,12 +13,13 @@ function RSVP() {
         <Button variant="success" size="lg" onClick={handleShow}>
           RSVP
         </Button>
-
         <Modal show={showModal} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Guest Modal</Modal.Title>
           </Modal.Header>
-          <Modal.Body>**insert form**</Modal.Body>
+          <Modal.Body>
+            test
+          </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
               Close
