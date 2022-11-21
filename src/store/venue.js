@@ -3,6 +3,7 @@ import { updateArray, addToArray, removeFromArray } from "../utility/change-arra
 const initialState = {
   user_id: null,
   userVenues: [],
+  selectedVenue: {},
 }
 
 
@@ -24,6 +25,8 @@ const reducer = (state = initialState, action) => {
       const arrWithRemovedVenue = removeFromArray(state.userVenues, action.payload.id);
       state = { ...state, userVenues: arrWithRemovedVenue }
       return state;
+    case 'change_selected_venue':
+      return {...state, selectedVenue: action.payload}
     default: return state;
   }
 }

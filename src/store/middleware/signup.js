@@ -17,7 +17,6 @@ async function createUser (auth) {
       url: `${process.env.REACT_APP_SERVER}/signup`,
       data: auth,
     }
-    console.log(config);
     const response = await axios(config);
     return response.data;
   } catch (e) { console.log(e) }
