@@ -1,10 +1,11 @@
 const initialState = {
   user: {
-    id: 1,
-    role: 'vendor',
-    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZlbmRvciIsImlhdCI6MTY2OTA0OTQzNn0._mlRlgILhhPGFTvQcKHf5mKxVIKqNUQOcmUNi1kRYBo'
+    id: 0,
+    role: '',
+    token: ''
   },
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZlbmRvciIsImlhdCI6MTY2OTA0OTQzNn0._mlRlgILhhPGFTvQcKHf5mKxVIKqNUQOcmUNi1kRYBo',
+
+  token: '',
   isAuthenticated: false,
 }
 

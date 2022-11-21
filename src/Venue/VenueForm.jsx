@@ -3,15 +3,18 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import { useSelector, useDispatch } from 'react-redux';
 import create from './../store/middleware/crud/create';
+import update from './../store/middleware/crud/update';
 
 function VenueForm() {
   const dispatch = useDispatch();
 
   const modals = useSelector(state => state.modals);
   const user = useSelector(state => state.user.user);
+  const selectedVenue = useSelector(state => state.venue.selectedVenue);
 
   const closeModal = () => {
-    dispatch({type: 'add_venue_modal'});
+    if(modals.add_venue_modal) dispatch({type: 'add_venue_modal'});
+    else dispatch({type: 'edit_venue_modal'});
   }
 
   const handleSubmit = (e) => {
@@ -20,21 +23,26 @@ function VenueForm() {
     const venueObj = {
       item: 'venue',
       vendor_id: user.id,
-      venueName: e.target.venueName.value,
-      location: e.target.location.value,
-      hours: e.target.hours.value,
-      imgUrl: '#',
-      pocName: e.target.pocName.value,
-      pocNumber: e.target.pocNumber.value,
-      requests: [],
-      confirmed: [],
-      security: e.target.security.checked,
-      cater: e.target.cater.checked,
-      foodOptions: [],
-      maxCapacityInt: parseInt(e.target.capacity.value),
+      venueName: e.target.venueName.value || selectedVenue.venueName,
+      location: e.target.location.value || selectedVenue.location,
+      hours: e.target.hours.value || selectedVenue.hours,
+      imgUrl: e.target.imgUrl.value || selectedVenue.imgUrl,
+      pocName: e.target.pocName.value || selectedVenue.pocName,
+      pocNumber: e.target.pocNumber.value || selectedVenue.pocNumber,
+      requests: selectedVenue.requests || [],
+      confirmed: selectedVenue.confirmed || [],
+      security: e.target.security.checked || selectedVenue.security,
+      cater: e.target.cater.checked || selectedVenue.cater,
+      foodOptions: selectedVenue.foodOptions || [],
+      maxCapacityInt: parseInt(e.target.capacity.value) || selectedVenue.maxCapacityInt,
     }
 
-    dispatch(create(user.token, `venue`, venueObj));
+    if(modals.add_venue_modal) dispatch(create(user.token, 'venue', venueObj));
+
+    if(modals.edit_venue_modal) {
+      venueObj.id = selectedVenue.id;
+      dispatch(update(user.token, `venue/${selectedVenue.id}`, venueObj));
+    }
 
     closeModal();
     
@@ -63,6 +71,11 @@ function VenueForm() {
 
           <Form.Group className="mb-3" controlId="hours">
             <Form.Label>Hours</Form.Label>
+            <Form.Control type="text" />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="imgUrl">
+            <Form.Label>Image URL</Form.Label>
             <Form.Control type="text" />
           </Form.Group>
 

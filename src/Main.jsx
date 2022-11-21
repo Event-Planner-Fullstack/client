@@ -7,6 +7,7 @@ import Venue from './Venue';
 
 const Main = () => {
   const user = useSelector(state => state.user);
+  console.log(user);
 
   return (
     <>

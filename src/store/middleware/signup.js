@@ -1,10 +1,16 @@
 import axios from 'axios';
 
-function getSignUpPayload(user, booksList) {
+function getSignUpPayload(user) {
+  console.log(user);
   return {
     type: 'login',
     payload: {
-      user,
+      user: {
+        username: user.user.username,
+        id: 1,
+        role: user.user.role,
+        token: user.user.token,
+      },
       token: user.token,
     }
   }
