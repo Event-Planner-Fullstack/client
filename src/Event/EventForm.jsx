@@ -22,6 +22,7 @@ function EventForm() {
       item: 'event',
       client_id: user.id,
       venue_id: selectedVenue.id,
+      vendor_id: selectedVenue.vendor_id,
       date: e.target.date.value,
       pocName: e.target.pocName.value,
       pocNumber: e.target.pocNumber.value,
