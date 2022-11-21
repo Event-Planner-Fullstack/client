@@ -9,6 +9,7 @@
     "bootstrap": "^5.2.2",
     "react": "18.2.0",
     "react-bootstrap": "^2.6.0",
+    "react-calendar": "^4.0.0",
     "react-dom": "18.2.0",
     "react-helmet": "^6.1.0",
     "react-if": "^4.1.4",
