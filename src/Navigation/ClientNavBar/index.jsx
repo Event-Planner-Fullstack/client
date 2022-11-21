@@ -5,7 +5,7 @@ import logo1 from './img/home.svg'
 import logo2 from './img/tray-empty.svg';
 import logo3 from './img/location.svg';
 import logo4 from './img/settings.svg';
-import './index.scss'
+import './ClientNavBar.scss'
 
 const ClientNavBar = () => {
 

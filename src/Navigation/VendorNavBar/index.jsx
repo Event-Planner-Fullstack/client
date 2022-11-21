@@ -3,27 +3,23 @@
 import { useState } from 'react';
 import logo1 from './img/home.svg'
 import logo2 from './img/tray-empty.svg';
-import logo3 from './img/tray-full.svg';
-import logo4 from './img/calendar.svg';
-import logo5 from './img/settings.svg';
-import './index.scss'
+import logo3 from './img/calendar.svg';
+import logo4 from './img/settings.svg';
+import './VendorNavBar.scss'
 
 const VendorNavBar = () => {
 
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState('home');
 
-  const handleClick = event => {
-    // 👇️ toggle isActive state on click
-    setIsActive(current => !current);
+  const handleClick = item => {
+    setIsActive(item);
   };
-
 
   return (
     <>
-      <body>
       <div className="navigation">
         <ul>
-          <li className={isActive ? " " : "list active"} onClick={handleClick}>
+        <li className={isActive === 'home' ? "list active" : " "} onClick={() => handleClick('home')}>
             <a href="#">
               <span className="icon">
                 <img src={logo1} />
@@ -31,7 +27,7 @@ const VendorNavBar = () => {
               <span className="text"> Home </span>
             </a>
           </li>
-          <li className={isActive ? "list active" : " "} onClick={handleClick}>
+          <li className={isActive === 'Requests' ? "list active" : " "} onClick={() => handleClick('Requests')}>
             <a href="#">
               <span className="icon">
                 <img src={logo2} />
@@ -39,26 +35,18 @@ const VendorNavBar = () => {
               <span className="text"> Requests </span>
             </a>
           </li>
-          <li className={isActive ? "list active" : " "} onClick={handleClick}>
+          <li className={isActive === 'Calendar' ? "list active" : " "} onClick={() => handleClick('Calendar')}>
             <a href="#">
               <span className="icon">
                 <img src={logo3} />
               </span>
-              <span className="text"> Requests </span>
-            </a>
-          </li>
-          <li className={isActive ? "list active" : " "} onClick={handleClick}>
-            <a href="#">
-              <span className="icon">
-                <img src={logo4} />
-              </span>
               <span className="text"> Calendar </span>
             </a>
           </li>
-          <li className={isActive ? "list active" : " "} onClick={handleClick}>
+          <li className={isActive === 'settings' ? "list active" : " "} onClick={() => handleClick('settings')}>
             <a href="#">
               <span className="icon">
-                <img src={logo5} />
+                <img src={logo4} />
               </span>
               <span className="text"> Account Settings </span>
             </a>
@@ -66,7 +54,6 @@ const VendorNavBar = () => {
           <div class="indicator"></div>
         </ul >
       </div >
-      </body>
     </>
   );
 };

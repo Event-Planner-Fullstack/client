@@ -14,7 +14,7 @@ const Brand = () => {
       <Container fluid>
         <Container className="d-flex align-items-center p-2"
           style={{
-            // border: " 2px solid red"
+            // border: "2px solid red"
           }}
         >
           <Image className="img-thumbnail"
@@ -25,7 +25,7 @@ const Brand = () => {
           />
           <Row className="m-3"
             style={{
-              // border: " 2px solid red",
+              // border: "2px solid red",
               height: "20vh",
               fontSize: "5rem",
               fontFamily: "Yellowtail"
@@ -33,14 +33,14 @@ const Brand = () => {
             Event Planner
           </Row>
         </Container>
-        <Row
-          style={{
-            // border: " 2px solid red",
-            height: "70vh"
-          }} >
-          {loremIpsum}
-          {loremIpsum}
-        </Row>
+        {/* <Row */}
+          {/* style={{ */}
+            {/* border: "2px solid red", */}
+            {/* height: "70vh" */}
+          {/* }} > */}
+          {/* {loremIpsum} */}
+          {/* {loremIpsum} */}
+        {/* </Row> */}
       </Container>
     </>
   )
