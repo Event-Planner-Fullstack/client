@@ -1,14 +1,20 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useDispatch, useSelector } from 'react-redux';
+import deleteOne from './../store/middleware/crud/delete';
 
 const VenueCard = ({ venue }) => {
   const dispatch = useDispatch();
+  const user = useSelector(state => state.user.user);
 
   const clickEditButton = (venue) => {
-    dispatch({type: 'edit_venue_modal'});
-    dispatch({type: 'change_selected_venue', payload: venue})
+    dispatch({ type: 'edit_venue_modal' });
+    dispatch({ type: 'change_selected_venue', payload: venue })
   }
+
+  // const clickDeleteButton = (venue) => {
+  //   dispatch(deleteOne(user.token, `venue/${venue.id}`));
+  // }
 
   return (
     <Card style={{ width: '18rem' }}>
@@ -21,6 +27,8 @@ const VenueCard = ({ venue }) => {
         <Card.Text>Security: {venue.security}, Cater: {venue.cater}</Card.Text>
         <Card.Text>Contact: {venue.pocName} at {venue.pocNumber} </Card.Text>
         <Button variant="primary" onClick={() => clickEditButton(venue)}>Edit</Button>
+
+        {/* <Button variant="primary" onClick={() => clickDeleteButton(venue)}>Delete</Button> */}
       </Card.Body>
     </Card>
   );
