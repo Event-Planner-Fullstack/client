@@ -11,6 +11,7 @@ const FindVenues = () => {
 
   useEffect(() => {
     dispatch(readAll(user.token, 'venue'));
+    dispatch(readAll(user.token, `event/user/${user.id}`));
   }, []);
 
   return (
