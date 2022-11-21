@@ -25,7 +25,10 @@ const PendingEvent = ({ event }) => {
           <Card.Text>Contact: {event.pocName} at {event.pocNumber} </Card.Text>
         </Card.Body>
 
-        <Button onClick={() => confirmEvent(event)}>Confirm</Button>
+        {
+          !event.confirmed &&
+          <Button onClick={() => confirmEvent(event)}>Confirm</Button>
+        }
 
       </Card>
     </>
