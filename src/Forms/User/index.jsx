@@ -44,7 +44,7 @@ const LoginForm = () => {
           <Nav.Item>
             <Nav.Item onClick={switchToLogin}>Login</Nav.Item>
           </Nav.Item>
-          <Nav.Item>n
+          <Nav.Item>
             <Nav.Item onClick={switchToSignup}>Signup</Nav.Item>
           </Nav.Item>
         </Nav>
