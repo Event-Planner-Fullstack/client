@@ -4,6 +4,8 @@ const initialState = {
   edit_venue_modal: false,
   add_event_modal: false,
   edit_event_modal: false,
+  login: true,
+  signup: false,
 
 }
 
@@ -24,6 +26,10 @@ const reducer = (state = initialState, action) => {
     case 'edit_venue_modal':
       const editEventModal = state.edit_event_modal ? false : true;
       return { ...state, edit_event_modal: editEventModal };
+    case 'toggle_login':
+      return {...state, login: action.payload};
+    case 'toggle_signup':
+      return {...state, signup: action.payload}
     default: return state;
   }
 }

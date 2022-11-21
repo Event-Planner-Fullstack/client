@@ -12,9 +12,9 @@ const ManageVenues = () => {
   const venueList = useSelector(state => state.venue.userVenues);
 
   useEffect(() => {
-    dispatch(readAll(user.token, `venue/${user.id}`));
+    dispatch(readAll(user.token, `venue/user/${user.id}`));
     console.log(venueList);
-  })
+  }, [])
 
   const addVenueButton = () => {
     dispatch({type: 'add_venue_modal'});

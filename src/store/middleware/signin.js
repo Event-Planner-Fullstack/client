@@ -1,10 +1,16 @@
 import axios from 'axios';
 
 function getSignInPayload(user) {
+  console.log(user.user);
   return {
     type: 'login',
     payload: {
-      user: user.user,
+      user: {
+        username: user.user.username,
+        id: 1,
+        role: user.user.role,
+        token: user.user.token,
+      },
       token: user.token,
     }
   }
