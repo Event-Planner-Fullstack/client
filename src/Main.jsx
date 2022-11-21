@@ -20,7 +20,7 @@ const Main = () => {
         <Venue />
       </When>
 
-      <When condition={user.isAuthenticated && user.user.role === 'vendor'}>
+      <When condition={user.isAuthenticated && user.user.role === 'client'}>
         <Event />
       </When>
     </>
