@@ -1,23 +1,24 @@
-import { useSelector } from "react-redux";
-import PendingEvent from "./PendingEvent";
+import { useSelector, useDispatch } from 'react-redux';
+import EventCard from './EventCard';
 
-const UpcomingEvents = () => {
+const ConfirmedEvents = () => {
+
   const userEvents = useSelector(state => state.event.userEvents);
 
   const filterEvents = () => {
     return userEvents.filter(event => event.confirmed === true);
-  }
+  } 
 
   return (
     <>
-      <h1>Upcoming Events</h1>
+      <header>Confirmed Events</header>
       {
         filterEvents().map(event => (
-          <PendingEvent key={event.id} event={event} />
+          <EventCard key={event.id} event={event} />
         ))
       }
     </>
   )
 }
 
-export default UpcomingEvents;
+export default ConfirmedEvents;

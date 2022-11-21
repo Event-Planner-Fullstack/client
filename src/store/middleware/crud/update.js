@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 function getUpdatePayload(obj) {
+  console.log(obj.item);
   const action = {
     type: `update_${obj.item}`,
     payload: obj
@@ -24,8 +25,10 @@ const updateRequest = async (token, endpoint, body) => {
 function update(token, endpoint, body) {
   return async function (dispatch) {
     try {
-      const bookRecord = await updateRequest(token, endpoint, body);
-      return dispatch(getUpdatePayload(bookRecord));
+      console.log(body);
+      const record = await updateRequest(token, endpoint, body);
+      console.log(record);
+      return dispatch(getUpdatePayload(record));
     } catch (e) {
       return console.log(e);
     }

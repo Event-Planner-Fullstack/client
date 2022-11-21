@@ -13,7 +13,7 @@ const ManageVenues = () => {
 
   useEffect(() => {
     dispatch(readAll(user.token, `venue/user/${user.id}`));
-    console.log(venueList);
+    dispatch(readAll(user.token, `event/venue/${user.id}`));
   }, [])
 
   const addVenueButton = () => {
