@@ -4,6 +4,7 @@ import Login from './Pages/Login';
 import { When } from 'react-if';
 import { useSelector } from 'react-redux';
 import Venue from './Venue';
+import Event from './Event';
 
 const Main = () => {
   const user = useSelector(state => state.user);
@@ -22,8 +23,6 @@ const Main = () => {
       <When condition={user.isAuthenticated && user.user.role === 'client'}>
         <Event />
       </When>
-
-      <Footer />
     </>
   )
 }
