@@ -1,5 +1,5 @@
 :root {
-    --clr: #ffffff;
+    --clr: #000000;
 }
 
 img {
@@ -9,7 +9,7 @@ img {
 .navigation {
     position: relative;
     width: 100%;
-    height: 70px;
+    height: 50px;
     background-color: rgb(202, 168, 109);
     display: flex;
     justify-content: center;
@@ -51,8 +51,12 @@ img {
     color: var(--clr);
 }
 
-.navigation ul li:hover a .icon {
+.navigation ul li.active:hover a .icon {
     transform: translateY(33px); 
+}
+
+.navigation ul li:hover a .icon {
+    transform: translateY(3px); 
 }
 
 .navigation ul li a .text {
@@ -65,9 +69,9 @@ img {
     transform: translateY(-50px);
 }
 
-.navigation ul li:hover a .text {
+.navigation ul li.active a .text {
     opacity: 1;
-    transform: translateY(-25px);
+    transform: translateY(-20px);
 }
 
 .indicator {
@@ -76,21 +80,24 @@ img {
     left: 79px;
     width: 60px;
     height: 60px;
-    background: rgb(245, 206, 126);
-    border-radius: 50%;
+    background: rgb(202, 168, 109);
+    border-radius: 40%;
     border: 6px solid var(--clr);
     transition: .3s; 
 }
 
-.navigation ul li:nth-child(1):hover ~ .indicator {
+.navigation ul li:nth-child(1).active ~ .indicator {
     transform: translateX(calc(150px * 0));   
 }
 
-.navigation ul li:nth-child(2):hover ~ .indicator {
+.navigation ul li:nth-child(2).active ~ .indicator {
     transform: translateX(calc(150px * 1));
 }
 
-.navigation ul li:nth-child(3):hover ~ .indicator {
+.navigation ul li:nth-child(3).active ~ .indicator {
     transform: translateX(calc(150px * 2));
 }
 
+.navigation ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(150px * 3));
+}

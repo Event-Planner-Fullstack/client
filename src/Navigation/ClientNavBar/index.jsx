@@ -12,10 +12,9 @@ const ClientNavBar = () => {
   const [isActive, setIsActive] = useState('home');
 
   const handleClick = item => {
-    // 👇️ toggle isActive state on click
     setIsActive(item);
   };
-  console.log(isActive)
+  
   return (
     <>
         <div className="navigation">

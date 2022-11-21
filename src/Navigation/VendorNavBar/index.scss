@@ -6,11 +6,10 @@ img {
     width:45px;
 }
 
-
 .navigation {
     position: relative;
     width: 100%;
-    height: 70px;
+    height: 50px;
     background-color: rgb(202, 168, 109);
     display: flex;
     justify-content: center;
@@ -52,7 +51,7 @@ img {
     color: var(--clr);
 }
 
-.navigation ul li:hover a .icon {
+.navigation ul li.active a .icon {
     transform: translateY(33px); 
 }
 
@@ -66,9 +65,9 @@ img {
     transform: translateY(-50px);
 }
 
-.navigation ul li:hover a .text {
+.navigation ul li.active a .text {
     opacity: 1;
-    transform: translateY(-25px);
+    transform: translateY(-20px);
 }
 
 .indicator {
@@ -77,8 +76,8 @@ img {
     left: 79px;
     width: 60px;
     height: 60px;
-    background: rgb(245, 206, 126);
-    border-radius: 50%;
+    background: rgb(12, 208, 35);
+    border-radius: 40%;
     border: 6px solid var(--clr);
     transition: .3s; 
 }
@@ -98,4 +97,3 @@ img {
 .navigation ul li:nth-child(5):hover ~ .indicator {
     transform: translateX(calc(150px * 4));
 }
-
