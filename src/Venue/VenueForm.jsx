@@ -34,15 +34,9 @@ function VenueForm() {
       maxCapacityInt: parseInt(e.target.capacity.value),
     }
 
-    const baseUrl = process.env.REACT_APP_SERVER;
+    dispatch(create(user.token, `venue`, venueObj));
 
-    console.log(venueObj);
-    console.log(user.token)
-    console.log(baseUrl);
-
-    console.log(create);
-
-    create(user.token, `${baseUrl}/venue`, venueObj);
+    closeModal();
     
   }
 
