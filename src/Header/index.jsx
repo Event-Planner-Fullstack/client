@@ -1,5 +1,3 @@
-'use strict';
-
 import './index.scss';
 
 const Header = () => {
