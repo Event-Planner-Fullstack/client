@@ -5,7 +5,7 @@ const initialState = {
     token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZlbmRvciIsImlhdCI6MTY2OTA0OTQzNn0._mlRlgILhhPGFTvQcKHf5mKxVIKqNUQOcmUNi1kRYBo'
   },
   token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZlbmRvciIsImlhdCI6MTY2OTA0OTQzNn0._mlRlgILhhPGFTvQcKHf5mKxVIKqNUQOcmUNi1kRYBo',
-  isAuthenticated: true,
+  isAuthenticated: false,
 }
 
 const reducer = (state = initialState, action) => {
