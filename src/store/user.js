@@ -4,6 +4,7 @@ const initialState = {
     role: '',
     token: ''
   },
+
   token: '',
   isAuthenticated: false,
 }
