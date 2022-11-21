@@ -16,9 +16,9 @@ const Main = () => {
 
       <When condition={!user.isAuthenticated}><Login /></When>
 
-      {/* <When condition={user.isAuthenticated && user.user.role === 'vendor'}>
+      <When condition={user.isAuthenticated && user.user.role === 'vendor'}>
         <Venue />
-      </When> */}
+      </When>
 
       <When condition={user.isAuthenticated && user.user.role === 'vendor'}>
         <Event />
