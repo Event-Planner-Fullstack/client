@@ -3,7 +3,8 @@
 import './index.scss';
 import Header from '../../Header';
 import Footer from '../../Footer';
-import ClientNavBar from '../../Navigation/ClientNavBar';
+import Body from '../../Body';
+import ClientNavBar from "../../Navigation";
 
 const Template = () => {
 
@@ -11,7 +12,7 @@ const Template = () => {
     <div className="template">
       <Header/>
       <ClientNavBar/>
-      <body>BODY</body>
+      <Body/>
       <Footer/>
     </div>
   );

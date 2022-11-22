@@ -8,21 +8,42 @@
     height: 55px;
 }
 
+@mixin bigLogo {
+    width: 100px;
+    border: 3px;
+}
+
 .icon img {
     width:45px;
 }
 
 .logo img {
     position: absolute;
-    top: 0px;
-    left: 40px;
-    width: 100px;
+    top: -25px;
+    left: 16px;
+    width: 70px;
     border-radius: 30%;
+    transition: 1s;
+    border: 5px solid var(--clr);
 }
 
 .navigationLogo li {
     list-style: none;
     opacity: 1;
+}
+
+.navigationLogo li.active .logo img {
+    @include bigLogo();
+    transition: 1s;
+
+}
+
+.navigationLogo li a .text{
+    position: relative;
+    display: block;
+    transform: translate(45px, -40px);
+    color: primary;
+    opacity: 0;
 }
 
 .navigationLogo li a .text{
@@ -49,11 +70,14 @@
 .navigation {
     display: flex;
     position:relative;
-    width: 100%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
     height: 50px;
     background: #9ED5C5;
     align-items: center;
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .navigation ul {
