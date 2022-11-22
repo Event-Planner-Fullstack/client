@@ -1,10 +1,13 @@
-import './index.scss';
+'use strict';
+
+import './Header.scss';
+import LoginForm from '../Forms/Login';
 
 const Header = () => {
 
   return (
     <header>
-      <LoginForm />
+      <LoginForm/>
     </header>
   );
 };

@@ -1,6 +1,6 @@
-// import Header from './Header';
-import Footer from './Footer';
-import Login from './Pages/Login';
+// import Header from '../src/Header';
+// import Footer from './Footer';
+import Template from '../src/Pages/Template';
 import { When } from 'react-if';
 import { useSelector } from 'react-redux';
 import Venue from './Venue';
@@ -12,7 +12,7 @@ const Main = () => {
     <>
       {/* <Header /> */}
 
-      <When condition={!user.isAuthenticated}><Login /></When>
+      <When condition={!user.isAuthenticated}><Template/></When>
 
       <When condition={user.isAuthenticated && user.user.role === 'vendor'}>
         <Venue />
