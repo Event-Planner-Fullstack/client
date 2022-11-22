@@ -16,7 +16,7 @@ const GuestForm = ({ toggleModal }) => {
       inviteCode: e.target.inviteCode.value,
     }
 
-    dispatch(createGuest(`guest`));
+    dispatch(createGuest('guest', guestObj));
     toggleModal();
   }
 

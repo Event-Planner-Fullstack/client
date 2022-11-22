@@ -11,7 +11,7 @@ const EventCard = ({ event }) => {
       <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={event.imgUrl} />
         <Card.Body>
-          <Card.Title>{getFormattedString(event.date)}</Card.Title>
+          <Card.Title>{event.date}</Card.Title>
           <When condition={event.confirmed}><Card.Text>INVITE CODE: {event.inviteCode}</Card.Text></When>
           <Card.Text>Capacity: {event.estimatedGuestCount}</Card.Text>
           <Card.Text>Security: {event.security}, Cater: {event.cater}</Card.Text>
