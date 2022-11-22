@@ -11,6 +11,13 @@ $pri-color: white;
   background-size: cover;
 }
 
+.carousel {
+  // border: 3px solid red;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
 .page {
   // border: 3px solid blue;
   @include background;

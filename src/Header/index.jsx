@@ -1,7 +1,4 @@
-'use strict';
-
-import LoginForm from '../Forms/Login';
-import './Header.scss';
+import './index.scss';
 
 const Header = () => {
 
