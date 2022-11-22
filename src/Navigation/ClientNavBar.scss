@@ -11,6 +11,8 @@
 @mixin bigLogo {
     width: 100px;
     border: 3px;
+    top: 10px;
+    left: 60px;
 }
 
 .icon img {
@@ -21,10 +23,11 @@
     position: absolute;
     top: -25px;
     left: 16px;
-    width: 70px;
+    width: 60px;
     border-radius: 30%;
-    transition: 1s;
+    transition: .3s;
     border: 5px solid var(--clr);
+    z-index: 2;
 }
 
 .navigationLogo li {
@@ -34,30 +37,44 @@
 
 .navigationLogo li.active .logo img {
     @include bigLogo();
-    transition: 1s;
+    transition: .3s;
 
 }
 
 .navigationLogo li a .text{
-    position: relative;
-    display: block;
-    transform: translate(45px, -40px);
-    color: primary;
+    position: absolute;
+    color: black;
+    left: 83px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: .45s;
     opacity: 0;
+    transform: translateY(-100px);
+    z-index: 3;
 }
 
-.navigationLogo li a .text{
-    position: relative;
-    display: block;
-    transform: translate(45px, -40px);
-    color: primary;
-    opacity: 0;
+.navigationLogo li:hover a .logo img {
+    transform: translateY(3px); 
 }
+
+.navigationLogo li:hover a .logo ~ .text {
+    transform: translateY(-50px); 
+}
+
+.navigationLogo li.active a .text {
+    opacity: 1;
+    transform: translateY(-50px);
+}
+
+.navigationLogo li:hover a .logo ~ .text {
+    transform: translateY(-52.5px); 
+}
+
 
 .indicator {
     position: absolute;
-    top: -60%;
-    left: 10px;;
+    top: 5px;
+    left: 54px;;
     width: 100px;
     height: 100px;
     background: #DEF5E5;
@@ -147,20 +164,20 @@
 
 .navigation ul li:nth-child(1).active ~ .indicator {
     @include littleIndicator;
-    transform: translate(212px, 85%);  
+    transform: translate(168px, 30%);  
 }
 
 .navigation ul li:nth-child(2).active ~ .indicator {
     @include littleIndicator;
-    transform: translate(212px + (110 * 1), 85%);
+    transform: translate(168px + (110 * 1), 30%);
 }
 
 .navigation ul li:nth-child(3).active ~ .indicator {
     @include littleIndicator;
-    transform: translate(212px + (110 * 2), 85%);
+    transform: translate(168px + (110 * 2), 30%);
 }
 
 .navigation ul li:nth-child(4).active ~ .indicator {
     @include littleIndicator;
-    transform: translate(212px + (110 * 3), 85%);
+    transform: translate(168px + (110 * 3), 30%);
 }

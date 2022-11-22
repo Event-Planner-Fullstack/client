@@ -1,7 +1,8 @@
 'use strict';
 
-import logo1 from './img/mail.svg'
-import logo2 from './img/phone.svg'
+import './Footer.scss';
+import logo1 from './img/mail.svg';
+import logo2 from './img/phone.svg';
 
 function Footer() {
 
