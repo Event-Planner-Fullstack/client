@@ -7,6 +7,7 @@ import PendingRequests from './PendingRequests';
 import UpcomingEvents from './UpcomingEvents';
 import VendorNavBar from '../Navigation/VendorNavBar';
 import readAll from './../store/middleware/crud/readAll';
+import './../Body/Body.scss';
 
 
 const Venue = () => {
@@ -29,14 +30,19 @@ const Venue = () => {
     <>
 
       <VendorNavBar setPage={setPage} />
-
       <Button onClick={refresh}>Refresh</Button>
 
-      <When condition={page === 'manage-venues'}><ManageVenues /></When>
+      <body>
+        <div class="info">
 
-      <When condition={page === 'pending-requests'}><PendingRequests /></When>
+          <When condition={page === 'manage-venues'}><ManageVenues /></When>
 
-      <When condition={page === 'upcoming-events'}><UpcomingEvents /></When>
+          <When condition={page === 'pending-requests'}><PendingRequests /></When>
+
+          <When condition={page === 'upcoming-events'}><UpcomingEvents /></When>
+        </div>
+      </body>
+
 
     </>
   )
