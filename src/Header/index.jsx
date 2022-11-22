@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { When } from 'react-if';
+import RSVP from './../Forms/RSVP';
 import './Header.scss';
 
 const Header = () => {
@@ -19,6 +20,7 @@ const Header = () => {
     <header>
       <When condition={!user.isAuthenticated}>
         <button onClick={showLoginForm}>Login</button>
+        <RSVP/>
       </When>
 
       <When condition={user.isAuthenticated}>
