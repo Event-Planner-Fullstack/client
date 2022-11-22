@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useDispatch, useSelector } from 'react-redux';
 import deleteOne from './../store/middleware/crud/delete';
+import './VenueCard.scss';
 
 const VenueCard = ({ venue }) => {
   const dispatch = useDispatch();
@@ -16,21 +17,31 @@ const VenueCard = ({ venue }) => {
   //   dispatch(deleteOne(user.token, `venue/${venue.id}`));
   // }
 
-  return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={venue.imgUrl} />
-      <Card.Body>
-        <Card.Title>{venue.venueName}</Card.Title>
-        <Card.Text>{venue.location}</Card.Text>
-        <Card.Text>{venue.hours}</Card.Text>
-        <Card.Text>Capacity: {venue.maxCapacityInt}</Card.Text>
-        <Card.Text>Security: {venue.security}, Cater: {venue.cater}</Card.Text>
-        <Card.Text>Contact: {venue.pocName} at {venue.pocNumber} </Card.Text>
-        <Button variant="primary" onClick={() => clickEditButton(venue)}>Edit</Button>
+  console.log(venue);
 
-        {/* <Button variant="primary" onClick={() => clickDeleteButton(venue)}>Delete</Button> */}
-      </Card.Body>
-    </Card>
+  return (
+    <div className="Cards">
+      <Card>
+        <Card.Img
+          variant="top"
+          src={venue.imgUrl}
+          alt="Venue Image"
+          />
+        <Card.Body>
+          <Card.Title>{venue.venueName}</Card.Title>
+          <Card.Text>{venue.location}</Card.Text>
+          <Card.Text>{venue.hours}</Card.Text>
+          <Card.Text>Capacity: {venue.maxCapacityInt}</Card.Text>
+          <Card.Text>Security: {venue.security}, Cater: {venue.cater}</Card.Text>
+          <Card.Text>Contact: {venue.pocName} at {venue.pocNumber} </Card.Text>
+          <Button variant="outline-primary"
+            onClick={() => clickEditButton(venue)}>
+            Edit
+          </Button>
+          {/* <Button variant="primary" onClick={() => clickDeleteButton(venue)}>Delete</Button> */}
+        </Card.Body>
+      </Card>
+    </div>
   );
 }
 

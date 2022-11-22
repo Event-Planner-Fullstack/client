@@ -25,6 +25,9 @@ const Login = () => {
             <RSVP />
           </Col>
         </Row>
+        <Row>
+          
+        </Row>
       </Container>
     </>
   );

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import readAll from './../store/middleware/crud/readAll';
 import VenueCard from "./VenueCard";
+import './VenueCard.scss';
 
 const ManageVenues = () => {
   const dispatch = useDispatch();
@@ -23,14 +24,20 @@ const ManageVenues = () => {
   return (
     <>
       <h1>Manage Venues</h1>
-      <Button onClick={addVenueButton}>Add a Venue</Button>
+      <Button 
+        onClick={addVenueButton}
+        variant="outline-primary">
+        Add a Venue
+      </Button>
       <VenueForm />
 
-      {
-        venueList.map(venue => (
-          <VenueCard key={venue.id} venue={venue} />
-        ))
-      }
+      <div className="venueCards">
+        {
+          venueList.map(venue => (
+              <VenueCard key={venue.id} venue={venue} />
+              ))
+        }
+      </div>
     </>
   )
 }
