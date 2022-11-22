@@ -24,7 +24,7 @@ function RSVP() {
             <Modal.Title>RSVP to an Event</Modal.Title>
           </Modal.Header>
           
-          <Modal.Body><GuestForm/></Modal.Body>
+          <Modal.Body><GuestForm toggleModal={toggleModal} /></Modal.Body>
 
         </Modal>
 

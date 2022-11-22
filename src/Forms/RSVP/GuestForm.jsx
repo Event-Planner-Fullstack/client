@@ -1,7 +1,11 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { useDispatch } from 'react-redux';
+import createGuest from './../../store/middleware/guestRSVP';
 
-const GuestForm = () => {
+const GuestForm = ({ toggleModal }) => {
+  const dispatch = useDispatch();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -12,7 +16,8 @@ const GuestForm = () => {
       inviteCode: e.target.inviteCode.value,
     }
 
-    console.log(guestObj);
+    dispatch(createGuest(`guest`));
+    toggleModal();
   }
 
   return (
