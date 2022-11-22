@@ -7,12 +7,13 @@ import logo3 from './img/calendar.svg';
 import logo4 from './img/settings.svg';
 import './VendorNavBar.scss'
 
-const VendorNavBar = () => {
+const VendorNavBar = ({ setPage }) => {
 
   const [isActive, setIsActive] = useState('home');
 
   const handleClick = item => {
     setIsActive(item);
+    setPage(item);
   };
 
   return (
@@ -27,31 +28,33 @@ const VendorNavBar = () => {
               <span className="text"> Home </span>
             </a>
           </li>
-          <li className={isActive === 'Requests' ? "list active" : " "} onClick={() => handleClick('Requests')}>
+
+          <li className={isActive === 'manage-venues' ? "list active" : " "} onClick={() => handleClick('manage-venues')}>
             <a href="#">
               <span className="icon">
                 <img src={logo2} />
               </span>
-              <span className="text"> Requests </span>
+              <span className="text"> Manage Venues </span>
             </a>
           </li>
-          <li className={isActive === 'Calendar' ? "list active" : " "} onClick={() => handleClick('Calendar')}>
+
+          <li className={isActive === 'pending-requests' ? "list active" : " "} onClick={() => handleClick('pending-requests')}>
             <a href="#">
               <span className="icon">
                 <img src={logo3} />
               </span>
-              <span className="text"> Calendar </span>
+              <span className="text"> Pending Requests </span>
             </a>
           </li>
-          <li className={isActive === 'settings' ? "list active" : " "} onClick={() => handleClick('settings')}>
+          <li className={isActive === 'upcoming-events' ? "list active" : " "} onClick={() => handleClick('upcoming-events')}>
             <a href="#">
               <span className="icon">
                 <img src={logo4} />
               </span>
-              <span className="text"> Account Settings </span>
+              <span className="text"> Upcoming Events </span>
             </a>
           </li>
-          <div class="indicator"></div>
+          <div className="indicator"></div>
         </ul >
       </div >
     </>
