@@ -4,6 +4,7 @@ import { When } from 'react-if';
 import { useSelector } from 'react-redux';
 import Venue from './Venue';
 import Event from './Event';
+import EmptyNav from './Navigation/EmptyNavBar';
 
 const Main = () => {
   const user = useSelector(state => state.user);
@@ -11,7 +12,10 @@ const Main = () => {
     <>
       <Header />
 
-      <When condition={!user.isAuthenticated}><Login /></When>
+      <When condition={!user.isAuthenticated}>
+        <EmptyNav/>
+        <Login />
+      </When>
 
       <When condition={user.isAuthenticated && user.user.role === 'vendor'}>
         <Venue />
