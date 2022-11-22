@@ -3,6 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import { useSelector, useDispatch } from 'react-redux';
 import create from './../store/middleware/crud/create';
+import Chance from 'chance';
 
 function EventForm() {
   const dispatch = useDispatch();
@@ -18,6 +19,9 @@ function EventForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const chance = new Chance();
+    const inviteCode = chance.guid();
+
     const eventObj = {
       item: 'event',
       client_id: user.id,
@@ -32,6 +36,7 @@ function EventForm() {
       cater: e.target.cater.checked,
       estimatedGuestCount: parseInt(e.target.estimatedGuestCount.value),
       guestList: [],
+      inviteCode: inviteCode,
     }
 
     console.log(eventObj);
