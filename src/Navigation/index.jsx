@@ -1,69 +1,79 @@
 'use strict'
 
 import { useState } from 'react';
-import logo1 from './img/table.png'
-import logo2 from './img/tray-empty.svg';
-import logo3 from './img/location.svg';
-import logo4 from './img/calendar.svg';
-import logo5 from './img/person.svg';
+import icon1 from './img/table.png'
+import icon2 from './img/tray-empty.svg';
+import icon3 from './img/location.svg';
+import icon4 from './img/calendar.svg';
+import icon5 from './img/person.svg';
 import './ClientNavBar.scss'
 
 const ClientNavBar = () => {
 
   const [isActive, setIsActive] = useState('home');
+  const [switchActive, setSwitchActive] = useState('light');
 
-  const handleClick = item => {
-    setIsActive(item);
+  const handleClick = e => {
+    setIsActive(e);
   };
+
+  const handleSwitchClick = e => {
+    setSwitchActive(e);
+  }
 
   return (
     <>
       <div className="navigation">
         <ul>
-          <li className={isActive === "requests" ? "list active" : " "} onClick={() => handleClick('requests')}>
+          <li className={isActive === "inbox" ? "list active" : " "} onClick={() => handleClick('inbox')}>
             <a href="#">
               <span className="icon">
-                <img src={logo2} />
+                <img src={icon2} />
               </span>
-              <span className="text"> Requests </span>
+              <span className="text"> Inbox </span>
             </a>
           </li>
-          <li className={isActive === 'locations' ? "list active" : " "} onClick={() => handleClick('locations')}>
+
+          <li className={isActive === 'venues' ? "list active" : " "} onClick={() => handleClick('venues')}>
             <a href="#">
               <span className="icon">
-                <img src={logo3} />
+                <img src={icon3} />
               </span>
-              <span className="text"> Venue Locations </span>
+              <span className="text"> Venues </span>
             </a>
           </li>
+
           <li className={isActive === 'calendar' ? "list active" : " "} onClick={() => handleClick('calendar')}>
             <a href="#">
               <span className="icon">
-                <img src={logo4} />
+                <img src={icon4} />
               </span>
-              <span className="text"> Home </span>
+              <span className="text"> Calendar </span>
             </a>
           </li>
-          <li className={isActive === 'settings' ? "list active" : " "} onClick={() => handleClick('settings')}>
+
+          <li className={isActive === 'account' ? "list active" : " "} onClick={() => handleClick('account')}>
             <a href="#">
               <span className="icon">
-                <img src={logo5} />
+                <img src={icon5} />
               </span>
-              <span className="text"> Account Settings </span>
+              <span className="text"> Account </span>
             </a>
           </li>
-        <div class="indicator"></div>
-        
+          <div class="indicator"></div>
         </ul >
       </div >
-      <div className={isActive === 'home' ? "list active" : " "} onClick={() => handleClick('home')}>
+
+      <div className="navigationLogo">
+        <li className={isActive === 'home' ? "list active" : " "} onClick={() => handleClick('home')}>
           <a href="#">
             <span className="logo">
-              <img src={logo1} />
+              <img src={icon1} />
             </span>
-            <span className="textLogo"> Home </span>
+            <span className="text"> Home </span>
           </a>
-        </div>
+        </li>
+      </div>
     </>
   );
 };
