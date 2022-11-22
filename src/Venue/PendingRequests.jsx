@@ -8,8 +8,6 @@ const PendingRequests = () => {
     return userEvents.filter(event => event.confirmed === false);
   }
 
-  console.log(userEvents);
-
   return (
     <>
       <h1>Pending Requests</h1>

@@ -7,10 +7,11 @@ const PendingEvent = ({ event }) => {
   const dispatch = useDispatch();
 
   const user = useSelector(state => state.user.user);
+  const venueList = useSelector(state => state.venue.venueList);
 
   const confirmEvent = (event) => {
     event.confirmed = true;
-    console.log(event);
+    event.guestList = [];
     dispatch(update(user.token, `event/${event.id}`, event));
   }
 
@@ -21,7 +22,7 @@ const PendingEvent = ({ event }) => {
         <Card.Body>
           <Card.Title>{event.date}</Card.Title>
           <Card.Text>Capacity: {event.estimatedGuestCount}</Card.Text>
-          <Card.Text>Security: {event.security}, Cater: {event.cater}</Card.Text>
+          <Card.Text>Security: {event.security ? 'Yes' : 'No'}, Cater: {event.cater ? 'Yes' : 'No'}</Card.Text>
           <Card.Text>Contact: {event.pocName} at {event.pocNumber} </Card.Text>
         </Card.Body>
 

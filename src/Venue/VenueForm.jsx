@@ -29,11 +29,8 @@ function VenueForm() {
       imgUrl: e.target.imgUrl.value || selectedVenue.imgUrl,
       pocName: e.target.pocName.value || selectedVenue.pocName,
       pocNumber: e.target.pocNumber.value || selectedVenue.pocNumber,
-      requests: selectedVenue.requests || [],
-      confirmed: selectedVenue.confirmed || [],
       security: e.target.security.checked || selectedVenue.security,
       cater: e.target.cater.checked || selectedVenue.cater,
-      foodOptions: selectedVenue.foodOptions || [],
       maxCapacityInt: parseInt(e.target.capacity.value) || selectedVenue.maxCapacityInt,
     }
 

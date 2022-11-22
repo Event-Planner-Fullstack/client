@@ -1,7 +1,7 @@
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import { useDispatch, useSelector } from 'react-redux';
 import signup from './../../store/middleware/signup';
 import signin from './../../store/middleware/signin';
@@ -23,6 +23,10 @@ const LoginForm = () => {
     dispatch({ type: 'toggle_signup', payload: false });
   }
 
+  const closeModal = () => {
+    dispatch({ type: 'login_modal' });
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -40,7 +44,8 @@ const LoginForm = () => {
 
   return (
     <>
-      <Container className="form p-2 mb-5">
+      <Modal show={modals.login_modal} onHide={closeModal}>
+        <Modal.Header closeButton ><Modal.Title>Login</Modal.Title></Modal.Header>
         <Nav justify variant="tabs">
           <Nav.Item>
             <Nav.Item onClick={switchToLogin}>Login</Nav.Item>
@@ -85,7 +90,7 @@ const LoginForm = () => {
 
           <Button type="submit" className="btn btn-primary m-3">Submit</Button>
         </Form>
-      </Container>
+      </Modal>
     </>
   );
 };

@@ -1,5 +1,4 @@
-// import Header from './Header';
-import Footer from './Footer';
+import Header from './Header';
 import Login from './Pages/Login';
 import { When } from 'react-if';
 import { useSelector } from 'react-redux';
@@ -8,11 +7,9 @@ import Event from './Event';
 
 const Main = () => {
   const user = useSelector(state => state.user);
-  console.log(user);
-
   return (
     <>
-      {/* <Header /> */}
+      <Header />
 
       <When condition={!user.isAuthenticated}><Login /></When>
 

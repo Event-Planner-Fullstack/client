@@ -22,7 +22,7 @@ const Login = () => {
           </Col>
           <Col xs={4} className="login">
             <UserForm />
-            <RSVP />
+            
           </Col>
         </Row>
         <Row>

@@ -4,6 +4,8 @@ const initialState = {
   edit_venue_modal: false,
   add_event_modal: false,
   edit_event_modal: false,
+  guest_list_modal: false,
+  login_modal: false,
   login: true,
   signup: false,
 
@@ -26,10 +28,16 @@ const reducer = (state = initialState, action) => {
     case 'edit_venue_modal':
       const editEventModal = state.edit_event_modal ? false : true;
       return { ...state, edit_event_modal: editEventModal };
+    case 'guest_list_modal':
+      const showGuestList = state.guest_list_modal ? false : true;
+      return { ...state, guest_list_modal: showGuestList };
+    case 'login_modal':
+      const showLoginModal = state.login_modal ? false : true;
+      return { ...state, login_modal: showLoginModal }
     case 'toggle_login':
-      return {...state, login: action.payload};
+      return { ...state, login: action.payload };
     case 'toggle_signup':
-      return {...state, signup: action.payload}
+      return { ...state, signup: action.payload }
     default: return state;
   }
 }

@@ -1,21 +1,13 @@
 import VenueForm from "./VenueForm";
 import Button from 'react-bootstrap/Button'
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import readAll from './../store/middleware/crud/readAll';
 import VenueCard from "./VenueCard";
 import './VenueCard.scss';
 
 const ManageVenues = () => {
   const dispatch = useDispatch();
   
-  const user = useSelector(state => state.user.user);
   const venueList = useSelector(state => state.venue.userVenues);
-
-  useEffect(() => {
-    dispatch(readAll(user.token, `venue/user/${user.id}`));
-    dispatch(readAll(user.token, `event/venue/${user.id}`));
-  }, [])
 
   const addVenueButton = () => {
     dispatch({type: 'add_venue_modal'});

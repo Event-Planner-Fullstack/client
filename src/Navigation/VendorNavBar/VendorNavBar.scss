@@ -1,0 +1,183 @@
+:root {
+  --clr: #9ED5C5;
+}
+
+@mixin littleIndicator {
+  width: 70px;
+  height: 70px;
+}
+
+@mixin iconTop {
+  width: 70px;
+  height: 20px;
+}
+
+@mixin bigLogo {
+  width: 100px;
+  border: 3px;
+  top: 10px;
+  left: 60px;
+}
+
+.icon img {
+  width: 50px;
+}
+
+.logo img {
+  position: absolute;
+  top: -25px;
+  left: 20px;
+  width: 50px;
+  border-radius: 30%;
+  transition: .3s;
+  border: 5px solid var(--clr);
+  z-index: 2;
+}
+
+.navigationLogo li {
+  list-style: none;
+  opacity: 1;
+}
+
+.navigationLogo li.active .logo img {
+  @include bigLogo();
+  transition: .3s;
+
+}
+
+.navigationLogo li a .text{
+  position: absolute;
+  color: black;
+  left: 83px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: .45s;
+  opacity: 0;
+  transform: translateY(-100px);
+  z-index: 3;
+}
+
+.navigationLogo li:hover a .logo img {
+  transform: translateY(2px); 
+}
+
+.navigationLogo li:hover a .logo ~ .text {
+  transform: translateY(-50px); 
+}
+
+.navigationLogo li.active a .text {
+  opacity: 1;
+  transform: translateY(-55px);
+}
+
+.navigationLogo li:hover a .logo ~ .text {
+  transform: translateY(-52px); 
+}
+
+
+.indicator {
+  position: absolute;
+  top: 0px;
+  left: 50px;;
+  width: 120px;
+  height: 120px;
+  background: #DEF5E5;
+  border-radius: 30%;
+  border: 6px solid var(--clr);
+  transition: .3s; 
+}
+
+
+.navigation {
+  display: flex;
+  position:relative;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 60px;
+  background: #9ED5C5;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.navigation ul {
+  display:flex;
+  width: 100%;
+  padding: 0px;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  z-index: 1;
+  top: 5px;
+  left: 200px;
+  margin: 30px; 
+}
+
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  width: 60px;
+  height: 45px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 45px;
+  transition: 0.5s;
+  color: var(--clr);
+}
+
+.navigation ul li.active a .icon {
+  transform: translateY(30px); 
+}
+
+.navigation ul li.active:hover a .icon {
+  transform: translateY(33px); 
+}
+
+.navigation ul li:hover a .icon {
+  transform: translateY(3px); 
+}
+
+.navigation ul li:hover a .icon ~ .text {
+  transform: translateY(-24px); 
+}
+
+.navigation ul li.active a .text {
+  opacity: 1;
+  transform: translateY(-27px);
+}
+
+.navigation ul li a .text {
+  position: absolute;
+  color: black;
+  font-weight: 400em;
+  letter-spacing: 0.05em;
+  transition: .45s;
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+  @include littleIndicator;
+  transform: translate(175px, 35%);  
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator {
+  @include littleIndicator;
+  transform: translate(175px + (120 * 1), 35%);
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator {
+  @include littleIndicator;
+  transform: translate(175px + (120 * 2), 35%);
+}

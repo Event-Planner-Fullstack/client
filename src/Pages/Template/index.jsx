@@ -2,14 +2,14 @@
 
 import Header from '../../Header';
 import Body from '../../Body';
-import ClientNavBar from "../../Navigation";
+import VendorNavBar from '../../Navigation/VendorNavBar';
 
 const Template = () => {
 
   return (
     <>
-      <Header/>
-      <ClientNavBar/>
+    <Header/>
+      <VendorNavBar/>
       <Body/>
     </>
   );
