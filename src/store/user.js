@@ -7,6 +7,7 @@ const initialState = {
 
   token: '',
   isAuthenticated: false,
+  loginError: false,
 }
 
 const reducer = (state = initialState, action) => {
@@ -17,6 +18,9 @@ const reducer = (state = initialState, action) => {
     case 'logout':
       state = initialState;
       return state;
+    case 'change_error_status':
+      const status = state.loginError ? false : true;
+      state = { ...state, }
     default: return state
   }
 }
