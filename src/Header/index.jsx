@@ -1,13 +1,29 @@
-'use strict';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { When } from 'react-if';
 import './Header.scss';
-import LoginForm from '../Forms/Login';
 
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const user = useSelector(state => state.user);
+
+  const showLoginForm = () => {
+    dispatch({ type: 'login_modal' });
+  }
+
+  const logout = () => {
+    dispatch({ type: 'logout' });
+  }
 
   return (
     <header>
-      <LoginForm/>
+      <When condition={!user.isAuthenticated}>
+        <button onClick={showLoginForm}>Login</button>
+      </When>
+
+      <When condition={user.isAuthenticated}>
+        <button onClick={logout}>Logout</button>
+      </When>
     </header>
   );
 };
