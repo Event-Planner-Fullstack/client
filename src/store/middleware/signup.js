@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 function getSignUpPayload(user) {
-  console.log(user);
   return {
     type: 'login',
     payload: {
