@@ -1,13 +1,13 @@
 const initialState = {
   error: false,
   alreadyRSVP: false,
-  createdGuest: {},
+  guestList: [],
 }
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'create_guest':
-      state = { ...state, createdGuest: action.payload }
+    case 'get_all_guest':
+      state = { ...state, guestList: action.payload }
     default: return state;
   }
 }

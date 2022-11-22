@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import VenueCard from './VenueCard';
+import EventForm from './EventForm';
 
 const FindVenues = () => {
   const venueList = useSelector(state => state.venue.userVenues);
@@ -14,6 +15,7 @@ const FindVenues = () => {
           <VenueCard key={venue.id} venue={venue}/>
         ))
       }
+      <EventForm />
     </>
   )
 }
