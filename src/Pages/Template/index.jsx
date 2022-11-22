@@ -1,15 +1,15 @@
 'use strict';
 
-// import Header from '../../Header';
+import Header from '../../Header';
 import Body from '../../Body';
-import ClientNavBar from '../../Navigation/ClientNavBar';
+import VendorNavBar from '../../Navigation/VendorNavBar';
 
 const Template = () => {
 
   return (
     <>
-      {/* <Header/> */}
-      <ClientNavBar/>
+    <Header/>
+      <VendorNavBar/>
       <Body/>
     </>
   );

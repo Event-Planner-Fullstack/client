@@ -11,7 +11,7 @@ const ClientNavBar = ({ setPage }) => {
 
   const handleClick = item => {
     setIsActive(item);
-    // setPage(item);
+    setPage(item);
   };
 
   return (

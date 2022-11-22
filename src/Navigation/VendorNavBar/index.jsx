@@ -5,7 +5,7 @@ import logo1 from './../img/table.png'
 import logo2 from './../img/tray-empty.svg';
 import logo3 from './../img/calendar.svg';
 import logo4 from './../img/settings.svg';
-import './../ClientNavBar/ClientNavBar.scss'
+import './VendorNavBar.scss';
 
 const VendorNavBar = ({ setPage }) => {
 
@@ -20,15 +20,6 @@ const VendorNavBar = ({ setPage }) => {
     <>
       <div className="navigation">
         <ul>
-          {/* <li className={isActive === 'home' ? "list active" : " "} onClick={() => handleClick('home')}>
-            <a href="#">
-              <span className="icon">
-                <img src={logo1} />
-              </span>
-              <span className="text"> Home </span>
-            </a>
-          </li> */}
-
           <li className={isActive === 'manage-venues' ? "list active" : " "} onClick={() => handleClick('manage-venues')}>
             <a href="#">
               <span className="icon">
