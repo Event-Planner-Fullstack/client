@@ -11,15 +11,10 @@ import './ClientNavBar.scss'
 const ClientNavBar = () => {
 
   const [isActive, setIsActive] = useState('home');
-  const [switchActive, setSwitchActive] = useState('light');
 
   const handleClick = e => {
     setIsActive(e);
   };
-
-  const handleSwitchClick = e => {
-    setSwitchActive(e);
-  }
 
   return (
     <>
@@ -62,9 +57,8 @@ const ClientNavBar = () => {
           </li>
           <div class="indicator"></div>
         </ul >
-      </div >
-
-      <div className="navigationLogo">
+        
+        <div className="navigationLogo">
         <li className={isActive === 'home' ? "list active" : " "} onClick={() => handleClick('home')}>
           <a href="#">
             <span className="logo">
@@ -74,6 +68,8 @@ const ClientNavBar = () => {
           </a>
         </li>
       </div>
+      </div >
+
     </>
   );
 };

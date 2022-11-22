@@ -1,0 +1,19 @@
+body {
+    position: relative;
+    background-color: red;
+}
+
+body .info {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 600px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 30px;
+    border: 6px solid var(--clr);
+    z-index: 0;
+}

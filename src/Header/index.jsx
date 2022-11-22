@@ -1,15 +1,14 @@
 'use strict';
 
-import './index.scss';
+import LoginForm from '../Forms/Login';
+import './Header.scss';
 
 const Header = () => {
 
   return (
     <header>
-    <div class="logo">
-      <img/>
-    </div>
-   </header>
+      <LoginForm />
+    </header>
   );
 };
 
