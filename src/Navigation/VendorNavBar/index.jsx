@@ -1,11 +1,11 @@
 'use strict'
 
 import { useState } from 'react';
-import logo1 from './img/home.svg'
-import logo2 from './img/tray-empty.svg';
-import logo3 from './img/calendar.svg';
-import logo4 from './img/settings.svg';
-import './VendorNavBar.scss'
+import logo1 from './../img/home.svg'
+import logo2 from './../img/tray-empty.svg';
+import logo3 from './../img/calendar.svg';
+import logo4 from './../img/settings.svg';
+import './../ClientNavBar/ClientNavBar.scss'
 
 const VendorNavBar = ({ setPage }) => {
 

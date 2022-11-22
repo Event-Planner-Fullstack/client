@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import logo1 from './img/home.svg'
-import logo2 from './img/tray-empty.svg';
-import logo3 from './img/location.svg';
-import logo4 from './img/settings.svg';
+import logo1 from './../img/home.svg'
+import logo2 from './../img/tray-empty.svg';
+import logo3 from './../img/location.svg';
+import logo4 from './../img/settings.svg';
 import './ClientNavBar.scss'
 
 const ClientNavBar = ({setPage}) => {
