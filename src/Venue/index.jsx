@@ -3,7 +3,6 @@ import { When } from 'react-if';
 import ManageVenues from './ManageVenues';
 import PendingRequests from './PendingRequests';
 import UpcomingEvents from './UpcomingEvents';
-// import VenueNav from './VenueNav';
 import VendorNavBar from '../Navigation/VendorNavBar';
 
 
@@ -12,7 +11,6 @@ const Venue = () => {
 
   return (
     <>
-      {/* <VenueNav setPage={setPage} /> */}
 
       <VendorNavBar setPage={setPage} />
 

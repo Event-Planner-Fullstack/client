@@ -34,6 +34,8 @@ function EventForm() {
       guestList: [],
     }
 
+    console.log(eventObj);
+
     dispatch(create(user.token, 'event', eventObj));
 
     closeModal();
