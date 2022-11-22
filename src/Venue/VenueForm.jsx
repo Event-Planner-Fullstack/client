@@ -19,7 +19,7 @@ function VenueForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    
     const venueObj = {
       item: 'venue',
       vendor_id: user.id,
@@ -33,6 +33,11 @@ function VenueForm() {
       cater: e.target.cater.checked || selectedVenue.cater,
       maxCapacityInt: parseInt(e.target.capacity.value) || selectedVenue.maxCapacityInt,
     }
+
+    if(!venueObj.imgUrl) {
+      venueObj.imgUrl = 'https://images.unsplash.com/photo-1484156818044-c040038b0719?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80';
+    }
+    console.log(venueObj);
 
     if(modals.add_venue_modal) dispatch(create(user.token, 'venue', venueObj));
 

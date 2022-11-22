@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useDispatch, useSelector } from 'react-redux';
 import deleteOne from './../store/middleware/crud/delete';
+import './VenueCard.scss';
 
 const VenueCard = ({ venue }) => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const VenueCard = ({ venue }) => {
   const clickDeleteButton = (venue) => {
     dispatch(deleteOne(user.token, `venue/${venue.id}`));
   }
-
+  
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={venue.imgUrl} />
