@@ -4,10 +4,8 @@ const Header = () => {
 
   return (
     <header>
-    <div class="logo">
-      <img/>
-    </div>
-   </header>
+      <LoginForm />
+    </header>
   );
 };
 
