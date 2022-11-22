@@ -46,6 +46,7 @@ const VendorNavBar = ({ setPage }) => {
               <span className="text"> Pending Requests </span>
             </a>
           </li>
+          
           <li className={isActive === 'upcoming-events' ? "list active" : " "} onClick={() => handleClick('upcoming-events')}>
             <a href="#">
               <span className="icon">
