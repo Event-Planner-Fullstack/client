@@ -1,5 +1,3 @@
-'use strict'
-
 import { useState } from 'react';
 import logo1 from './img/home.svg'
 import logo2 from './img/tray-empty.svg';
@@ -7,12 +5,13 @@ import logo3 from './img/location.svg';
 import logo4 from './img/settings.svg';
 import './ClientNavBar.scss'
 
-const ClientNavBar = () => {
+const ClientNavBar = ({setPage}) => {
 
   const [isActive, setIsActive] = useState('home');
 
   const handleClick = item => {
     setIsActive(item);
+    setPage(item);
   };
   
   return (
@@ -27,31 +26,35 @@ const ClientNavBar = () => {
                 <span className="text"> Home </span>
               </a>
             </li>
-            <li className={isActive === "requests" ? "list active" : " "} onClick={() => handleClick('requests')}>
+
+
+            <li className={isActive === "find-venues" ? "list active" : " "} onClick={() => handleClick('find-venues')}>
               <a href="#">
                 <span className="icon">
                   <img src={logo2} />
                 </span>
-                <span className="text"> Requests </span>
+                <span className="text"> Find Venues </span>
               </a>
             </li>
-            <li className={isActive === 'locations' ? "list active" : " "} onClick={() => handleClick('locations')}>
+            <li className={isActive === 'requested-events' ? "list active" : " "} onClick={() => handleClick('requested-events')}>
               <a href="#">
                 <span className="icon">
                   <img src={logo3} />
                 </span>
-                <span className="text"> Venue Locations </span>
+                <span className="text"> Requested Events </span>
               </a>
             </li>
-            <li className={isActive === 'settings' ? "list active" : " "} onClick={() => handleClick('settings')}>
+
+
+            <li className={isActive === 'confirmed-events' ? "list active" : " "} onClick={() => handleClick('confirmed-events')}>
               <a href="#">
                 <span className="icon">
                   <img src={logo4} />
                 </span>
-                <span className="text"> Account Settings </span>
+                <span className="text"> Confirmed Events </span>
               </a>
             </li>
-            <div class="indicator"></div>
+            <div className="indicator"></div>
           </ul >
         </div >
     </>

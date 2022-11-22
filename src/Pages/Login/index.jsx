@@ -17,7 +17,7 @@ const Login = () => {
         <Row className="page">
           <Col className="brand">
             <Brand/>
-            <Calendar/>
+            {/* <Calendar/> */}
             <CarouselPage className="carousel"/>
           </Col>
           <Col xs={4} className="login">
