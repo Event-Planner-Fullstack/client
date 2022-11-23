@@ -14,4 +14,3 @@ This application solves the pain point of having a ton of different databases fo
 
 MVP is finding at least three third party APIs that we can pull job postings from. It also allows users to filter and sort the search results from those APIs. Users can also save search criteria and jobs in a database.
 
-

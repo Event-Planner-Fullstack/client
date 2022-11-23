@@ -1,0 +1,19 @@
+body {
+    background-color: peachpuff;
+}
+
+body .info {
+    margin-top:-5px;
+    margin-bottom: 10px;
+    min-height: 600px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 30px;
+    border: 6px solid var(--clr);
+    background-color: #DEF5E5;
+    z-index: 0;
+}

@@ -1,0 +1,25 @@
+
+
+.Cards {
+  margin: auto;
+  margin-top: 10px;
+  width: 18rem;
+}
+
+.venueButton {
+  margin-left: 25px;
+}
+
+.venueCardButton {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.venueCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-around;
+}

@@ -1,0 +1,43 @@
+import axios from 'axios';
+
+function getSignUpPayload(user) {
+  return {
+    type: 'login',
+    payload: {
+      user: {
+        username: user.user.username,
+        id: 1,
+        role: user.user.role,
+        token: user.user.token,
+      },
+      token: user.token,
+    }
+  }
+}
+
+async function createUser (auth) {
+  try {
+    const config = {
+      method: 'post',
+      url: `${process.env.REACT_APP_SERVER}/signup`,
+      data: auth,
+    }
+    const response = await axios(config);
+    return response.data;
+  } catch (e) { console.log('sign up error') }
+}
+
+
+
+function signup(auth) {
+  return async function (dispatch) {
+    try {
+      const user = await createUser(auth);
+      return dispatch(getSignUpPayload(user));
+    } catch (e) {
+      return dispatch({ type: 'change_error_status', payload: true });
+    }
+  }
+}
+
+export default signup;
