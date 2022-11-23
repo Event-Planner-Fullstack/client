@@ -31,6 +31,7 @@ const Event = () => {
       <ClientNavBar setPage={setPage} />
 
       <Button onClick={refresh}>Refresh</Button>
+    
       <div className="info">
         <When condition={page === 'find-venues'}><FindVenues /></When>
 
