@@ -4,8 +4,6 @@ import { When } from 'react-if';
 import { useSelector } from 'react-redux';
 import Venue from './Venue';
 import Event from './Event';
-import EmptyNav from './Navigation/EmptyNavBar';
-import Template from './Pages/Template';
 import Footer from './Footer';
 import Login from './Pages/Login'
 // import './Pages/Login/Login.scss';
@@ -16,7 +14,7 @@ const Main = () => {
     <>
       <Header />
       <When condition={!user.isAuthenticated}>
-        <Login />
+        <Homepage />
       </When>
 
       <When condition={user.isAuthenticated && user.user.role === 'vendor'}>

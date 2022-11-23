@@ -1,12 +1,12 @@
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useDispatch, useSelector } from 'react-redux';
 import signup from '../../store/middleware/signup';
 import signin from '../../store/middleware/signin';
 import { When } from 'react-if';
 import InvalidSignUp from '../../Alerts/InvalidSignUp';
+import './User.scss';
 
 const LoginForm = () => {
   const dispatch = useDispatch();

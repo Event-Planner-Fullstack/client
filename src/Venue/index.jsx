@@ -33,6 +33,8 @@ const Venue = () => {
       <div>
         <div className="info">
 
+          <button className='eventBtn' onClick={refresh}>Refresh</button>
+
           <When condition={page === 'manage-venues'}><ManageVenues /></When>
 
           <When condition={page === 'pending-requests'}><PendingRequests /></When>

@@ -1,6 +1,5 @@
 $font: 'Proxima Nova', sans-serif;
 $pri-color: white;
-
 @import url('https://fonts.googleapis.com/css2?family=Rochester&family=Yellowtail&display=swap');
 
 @mixin background {
@@ -13,26 +12,20 @@ $pri-color: white;
 
 .carousel {
   // border: 3px solid red;
+  top: 100px;
   top: 130px;
   overflow: hidden;
   position: relative;
-  height: 75vh;
   text-align: center;
-
-  .images {
-    margin: 1.2rem;
-    width: 60vw;
-    border-radius: 10px;
-  }
 }
 
 .appTitle {
-  position: absolute; 
+  position: absolute;
   width: 100%;
   text-align: center;
-  top: 100px;
+  top: 110px;
   font-size: 110px;
-  color: #81c7b3;
+  color: #81C7B3;
 }
 
 .page {
@@ -44,8 +37,9 @@ $pri-color: white;
 }
 
 .login {
+  // border: 3px solid green;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: 15px;
 }
