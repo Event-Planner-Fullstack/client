@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import EventCard from './EventCard';
+import './Event.scss';
 
 const ConfirmedEvents = () => {
 
@@ -12,11 +13,13 @@ const ConfirmedEvents = () => {
   return (
     <>
       <header>Confirmed Events</header>
-      {
-        filterEvents().map(event => (
-          <EventCard key={event.id} event={event} />
-        ))
-      }
+      <div class="confirmedEvents">
+        {
+          filterEvents().map(event => (
+            <EventCard key={event.id} event={event} />
+          ))
+        }
+      </div>
     </>
   )
 }

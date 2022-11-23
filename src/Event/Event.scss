@@ -1,4 +1,22 @@
+.confirmedEvents {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ flex-wrap: wrap;
+ align-items: flex-start;
+ align-content: space-around;
+}
+
 .eventCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-around;
+}
+
+.findVenues {
   display: flex;
   flex-direction: row;
   justify-content: space-around;

@@ -10,11 +10,13 @@ const FindVenues = () => {
   return (
     <>
       <header>Find Venues</header>
-      {
-        venueList.map(venue => (
-          <VenueCard key={venue.id} venue={venue}/>
-        ))
-      }
+      <div className="findVenues">
+        {
+          venueList.map(venue => (
+            <VenueCard key={venue.id} venue={venue}/>
+          ))
+        }
+      </div>
       <EventForm />
     </>
   )

@@ -5,6 +5,8 @@ import { getFormattedString } from './../utility/format-date';
 import readAll from './../store/middleware/crud/readAll';
 import { useDispatch, useSelector } from 'react-redux';
 import GuestList from './GuestList';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const EventCard = ({ event }) => {
   const dispatch = useDispatch();
@@ -37,7 +39,10 @@ const EventCard = ({ event }) => {
         </Card.Body>
 
         <When condition={event.confirmed}>
-          <Button onClick={() => viewGuestList(event.id)}>View Guest List</Button>
+          <Button
+            variant="outline-primary"
+            onClick={() => viewGuestList(event.id)}>
+            <FontAwesomeIcon icon={faEye}/>View Guest List</Button>
         </When>
 
       </Card>
