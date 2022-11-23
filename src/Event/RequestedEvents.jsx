@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import EventCard from './EventCard';
+import './Event.scss';
 
 const RequestedEvent = () => {
 

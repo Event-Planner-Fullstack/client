@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 function getSignInPayload(user) {
-  console.log(user.user);
   return {
     type: 'login',
     payload: {
@@ -25,8 +24,8 @@ const getUser = async (auth) => {
     }
     const response = await axios(config);
     return response.data;
-    
-  } catch (e) { console.log(e) }
+
+  } catch (e) { console.log('sign in error'); }
 }
 
 function signin(auth) {
@@ -35,7 +34,7 @@ function signin(auth) {
       const user = await getUser(auth);
       return dispatch(getSignInPayload(user));
     } catch (e) {
-      return console.log(e);
+      return dispatch({ type: 'change_error_status', payload: true });
     }
   }
 }

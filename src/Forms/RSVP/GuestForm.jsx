@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import createGuest from './../../store/middleware/guestRSVP';
 import './RSVP.scss';
 
-const GuestForm = ({ toggleModal }) => {
+const GuestForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
@@ -17,7 +17,6 @@ const GuestForm = ({ toggleModal }) => {
     }
 
     dispatch(createGuest('guest', guestObj));
-    toggleModal();
   }
 
   return (

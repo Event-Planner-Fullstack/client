@@ -4,19 +4,17 @@ import Col from 'react-bootstrap/Col';
 import CarouselPage from '../../Carousel';
 import EmptyNavBar from '../../Navigation/EmptyNavBar';
 import RSVP from '../../Forms/RSVP';
-import './Login.scss';
+import './../Homepage/Homepage.scss'
 
 const Login = () => {
 
   return (
     <>
       <EmptyNavBar />
-      <body>
-        <div class="appTitle"> Event Planner Co. </div>
-        <div class="info">
+        <div className="appTitle"> Event Planner Co. </div>
+        <div className="info">
           <CarouselPage className="carousel" />
         </div>
-      </body>
       <RSVP/>
 
       <Col xs={4} className="login">

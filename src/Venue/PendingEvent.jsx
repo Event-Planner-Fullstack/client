@@ -3,6 +3,8 @@ import Button from 'react-bootstrap/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import update from '../store/middleware/crud/update';
 import { getFormattedString } from '../utility/format-date';
+import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const PendingEvent = ({ event }) => {
   const dispatch = useDispatch();
@@ -29,7 +31,10 @@ const PendingEvent = ({ event }) => {
 
         {
           !event.confirmed &&
-          <Button onClick={() => confirmEvent(event)}>Confirm</Button>
+          <Button
+            variant="outline-primary"
+            onClick={() => confirmEvent(event)}>
+              <FontAwesomeIcon icon={faCircleCheck}/>Confirm</Button>
         }
 
       </Card>

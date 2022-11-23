@@ -1,9 +1,16 @@
-
-
 .Cards {
   margin: auto;
   margin-top: 10px;
   width: 18rem;
+}
+
+.pendingRequests {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-around;
 }
 
 .venueButton {

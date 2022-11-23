@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import PendingEvent from "./PendingEvent";
+import './VenueCard.scss';
 
 const PendingRequests = () => {
   const userEvents = useSelector(state => state.event.userEvents);

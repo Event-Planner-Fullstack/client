@@ -16,7 +16,14 @@ $pri-color: white;
   top: 130px;
   overflow: hidden;
   position: relative;
+  height: 75vh;
   text-align: center;
+
+  .images {
+    margin: 1.2rem;
+    width: 60vw;
+    border-radius: 10px;
+  }
 }
 
 .appTitle {
@@ -37,7 +44,6 @@ $pri-color: white;
 }
 
 .login {
-  // border: 3px solid green;
   display: flex;
   flex-direction: column;
   justify-content: center;

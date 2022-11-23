@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { When } from 'react-if';
+// import RSVP from './../Forms/RSVP';
 import './Header.scss';
+
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -18,14 +20,16 @@ const Header = () => {
   return (
     <header>
       <When condition={!user.isAuthenticated}>
-        <button class="loginBtn" onClick={showLoginForm}>Login</button>
+        <button className="loginBtn" onClick={showLoginForm}>Login</button>
       </When>
 
       <When condition={user.isAuthenticated}>
-        <button class="logoutBtn" onClick={logout}>Logout</button>
+        <button className="logoutBtn" onClick={logout}>Logout</button>
       </When>
+      {/* <RSVP /> */}
     </header>
   );
 };
+
 
 export default Header;
