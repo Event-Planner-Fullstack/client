@@ -37,8 +37,6 @@ const Event = () => {
         <When condition={page === 'requested-events'}><RequestedEvents /></When>
 
         <When condition={page === 'confirmed-events'}><ConfirmedEvents /></When>
-
-        <When condition={page === 'confirmed-events'}><ConfirmedEvents /></When>
       </div>
 
 
