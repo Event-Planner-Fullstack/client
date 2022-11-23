@@ -32,16 +32,12 @@ const Event = () => {
 
       <Button onClick={refresh}>Refresh</Button>
 
-      <body>
-        <div class="info">
-          <When condition={page === 'find-venues'}><FindVenues /></When>
+      <div className="info">
+        <When condition={page === 'find-venues'}><FindVenues /></When>
+        <When condition={page === 'requested-events'}><RequestedEvents /></When>
 
-          <When condition={page === 'requested-events'}><RequestedEvents /></When>
-
-          <When condition={page === 'confirmed-events'}><ConfirmedEvents /></When>
-        </div>
-      </body>
-
+        <When condition={page === 'confirmed-events'}><ConfirmedEvents /></When>
+      </div>
     </>
   )
 }

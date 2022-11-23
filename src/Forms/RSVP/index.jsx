@@ -10,20 +10,19 @@ function RSVP() {
   const showModal = useSelector(state => state.modals.guest_modal);
 
   const toggleModal = () => {
-    dispatch({type: 'guest_modal'});
+    dispatch({ type: 'guest_modal' });
   }
 
   return (
     <>
       <Container className="d-grid gap-2">
-        
         <Button variant="success" size="lg" onClick={toggleModal}> RSVP </Button>
-        
+
         <Modal show={showModal} onHide={toggleModal}>
           <Modal.Header closeButton>
             <Modal.Title>RSVP to an Event</Modal.Title>
           </Modal.Header>
-          
+
           <Modal.Body><GuestForm toggleModal={toggleModal} /></Modal.Body>
 
         </Modal>
