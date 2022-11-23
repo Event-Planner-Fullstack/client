@@ -12,6 +12,7 @@ const Login = () => {
     <>
       <EmptyNavBar />
       <body>
+        <div class="appTitle"> Event Planner Co. </div>
         <div class="info">
           <CarouselPage className="carousel" />
         </div>
