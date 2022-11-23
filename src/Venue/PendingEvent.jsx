@@ -2,6 +2,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import update from '../store/middleware/crud/update';
+import { getFormattedString } from '../utility/format-date';
 
 const PendingEvent = ({ event }) => {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ const PendingEvent = ({ event }) => {
       <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={event.imgUrl} />
         <Card.Body>
-          <Card.Title>{event.date}</Card.Title>
+          <Card.Title>{getFormattedString(event.date)}</Card.Title>
           <Card.Text>Capacity: {event.estimatedGuestCount}</Card.Text>
           <Card.Text>Security: {event.security ? 'Yes' : 'No'}, Cater: {event.cater ? 'Yes' : 'No'}</Card.Text>
           <Card.Text>Contact: {event.pocName} at {event.pocNumber} </Card.Text>
