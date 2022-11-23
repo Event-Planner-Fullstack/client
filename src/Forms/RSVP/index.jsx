@@ -19,7 +19,6 @@ function RSVP() {
   return (
     <>
       <Container className="d-grid gap-2">
-
         <Button variant="success" size="lg" onClick={toggleModal}> RSVP </Button>
 
         <Modal show={showModal} onHide={toggleModal}>

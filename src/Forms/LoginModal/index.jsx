@@ -54,10 +54,10 @@ const LoginForm = () => {
       <Modal show={modals.login_modal} onHide={closeModal}>
         <Modal.Header closeButton ><Modal.Title>Login</Modal.Title></Modal.Header>
         <Nav justify variant="tabs">
-          <Nav.Item>
+          <Nav.Item className="tab">
             <Nav.Item onClick={switchToLogin}>Login</Nav.Item>
           </Nav.Item>
-          <Nav.Item>
+          <Nav.Item className="tab">
             <Nav.Item onClick={switchToSignup}>Signup</Nav.Item>
           </Nav.Item>
         </Nav>
@@ -67,32 +67,35 @@ const LoginForm = () => {
 
           <Form.Group className="m-3">
             <Form.Label htmlFor="exampleInputEmail1" className="form-label">Email address</Form.Label>
-            <Form.Control type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+            <Form.Control type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
             <Form.Text id="emailHelp" className="form-text">We'll share your email with anyone.</Form.Text>
           </Form.Group>
 
-
           <Form.Group className="m-3">
             <Form.Label htmlFor="exampleInputPassword1" className="form-label">Password</Form.Label>
-            <Form.Control type="password" className="form-control" id="exampleInputPassword1" />
+            <Form.Control type="password" className="form-control" id="exampleInputPassword1" required />
           </Form.Group>
 
           <When condition={modals.signup}>
-            <Form.Check
-              inline
-              type='radio'
-              name='type'
-              label='vendor'
-              value='vendor'
-            />
 
-            <Form.Check
-              inline
-              type='radio'
-              label='client'
-              value='client'
-              name='type'
-            />
+            <div className="radio m-2">
+              <Form.Check
+                inline
+                type='radio'
+                name='type'
+                label='vendor'
+                value='vendor'
+              />
+            </div>
+            <div className="radio m-2">
+              <Form.Check
+                inline
+                type='radio'
+                label='client'
+                value='client'
+                name='type'
+              />
+            </div>
           </When>
 
           <Button type="submit" className="btn btn-primary m-3">Submit</Button>

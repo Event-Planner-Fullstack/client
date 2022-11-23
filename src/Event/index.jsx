@@ -31,16 +31,15 @@ const Event = () => {
       <ClientNavBar setPage={setPage} />
 
       <Button onClick={refresh}>Refresh</Button>
+      <div className="info">
+        <When condition={page === 'find-venues'}><FindVenues /></When>
 
-      <div>
-        <div className="info">
-          <When condition={page === 'find-venues'}><FindVenues /></When>
+        <When condition={page === 'requested-events'}><RequestedEvents /></When>
 
-          <When condition={page === 'requested-events'}><RequestedEvents /></When>
-
-          <When condition={page === 'confirmed-events'}><ConfirmedEvents /></When>
-        </div>
+        <When condition={page === 'confirmed-events'}><ConfirmedEvents /></When>
       </div>
+
+
 
     </>
   )
