@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import PendingEvent from "./PendingEvent";
+import './VenueCard.scss';
 
 const PendingRequests = () => {
   const userEvents = useSelector(state => state.event.userEvents);
@@ -11,11 +12,13 @@ const PendingRequests = () => {
   return (
     <>
       <h1>Pending Requests</h1>
-      {
-        filterEvents().map(event => (
-          <PendingEvent key={event.id} event={event} />
-        ))
-      }
+        <div className="pendingRequests">
+          {
+            filterEvents().map(event => (
+              <PendingEvent key={event.id} event={event} />
+            ))
+          }
+        </div>
     </>
   )
 }
