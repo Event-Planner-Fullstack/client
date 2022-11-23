@@ -32,8 +32,8 @@ const Venue = () => {
       <VendorNavBar setPage={setPage} />
       <Button onClick={refresh}>Refresh</Button>
 
-      <body>
-        <div class="info">
+      <div>
+        <div className="info">
 
           <When condition={page === 'manage-venues'}><ManageVenues /></When>
 
@@ -41,7 +41,7 @@ const Venue = () => {
 
           <When condition={page === 'upcoming-events'}><UpcomingEvents /></When>
         </div>
-      </body>
+      </div>
 
 
     </>
