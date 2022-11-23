@@ -1,12 +1,12 @@
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useDispatch, useSelector } from 'react-redux';
 import signup from '../../store/middleware/signup';
 import signin from '../../store/middleware/signin';
 import { When } from 'react-if';
 import InvalidSignUp from '../../Alerts/InvalidSignUp';
+import './User.scss';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -52,13 +52,13 @@ const LoginForm = () => {
   return (
     <>
       <Modal show={modals.login_modal} onHide={closeModal}>
-        <Modal.Header closeButton ><Modal.Title>Login</Modal.Title></Modal.Header>
-        <Nav justify variant="tabs">
-          <Nav.Item className="tab">
-            <Nav.Item onClick={switchToLogin}>Login</Nav.Item>
+        <Modal.Header className="modalHeader" closeButton ><Modal.Title >Login</Modal.Title></Modal.Header>
+        <Nav className="modalNav" justify variant="tabs">
+          <Nav.Item>
+            <Nav.Item className="modalSignupBtn" onClick={switchToLogin}>Login</Nav.Item>
           </Nav.Item>
-          <Nav.Item className="tab">
-            <Nav.Item onClick={switchToSignup}>Signup</Nav.Item>
+          <Nav.Item>
+            <Nav.Item className="modalLoginBtn" onClick={switchToSignup}>Signup</Nav.Item>
           </Nav.Item>
         </Nav>
 
@@ -77,28 +77,24 @@ const LoginForm = () => {
           </Form.Group>
 
           <When condition={modals.signup}>
+            <Form.Check className="formCheck"
+              inline
+              type='radio'
+              name='type'
+              label='vendor'
+              value='vendor'
+            />
 
-            <div className="radio m-2">
-              <Form.Check
-                inline
-                type='radio'
-                name='type'
-                label='vendor'
-                value='vendor'
-              />
-            </div>
-            <div className="radio m-2">
-              <Form.Check
-                inline
-                type='radio'
-                label='client'
-                value='client'
-                name='type'
-              />
-            </div>
+            <Form.Check className="formCheck"
+              inline
+              type='radio'
+              label='client'
+              value='client'
+              name='type'
+            />
           </When>
 
-          <Button type="submit" className="btn btn-primary m-3">Submit</Button>
+          <button type="submit" className="modalSubmitBtn">Submit</button>
         </Form>
         <InvalidSignUp />
       </Modal>

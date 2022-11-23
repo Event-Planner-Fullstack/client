@@ -4,7 +4,9 @@ import { When } from 'react-if';
 import { useSelector } from 'react-redux';
 import Venue from './Venue';
 import Event from './Event';
-import EmptyNav from './Navigation/EmptyNavBar';
+import Footer from './Footer';
+import Login from './Pages/Login'
+// import './Pages/Login/Login.scss';
 
 const Main = () => {
   const user = useSelector(state => state.user);
@@ -12,7 +14,6 @@ const Main = () => {
     <>
       <Header />
       <When condition={!user.isAuthenticated}>
-        <EmptyNav />
         <Homepage />
       </When>
 
@@ -23,6 +24,7 @@ const Main = () => {
       <When condition={user.isAuthenticated && user.user.role === 'client'}>
         <Event />
       </When>
+      <Footer />
     </>
   )
 }

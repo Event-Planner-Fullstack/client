@@ -12,8 +12,7 @@ const ConfirmedEvents = () => {
 
   return (
     <>
-      <header>Confirmed Events</header>
-      <div class="confirmedEvents">
+      <div className="confirmedEvents">
         {
           filterEvents().map(event => (
             <EventCard key={event.id} event={event} />

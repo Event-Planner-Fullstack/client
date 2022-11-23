@@ -1,5 +1,4 @@
 import VenueForm from "./VenueForm";
-import Button from 'react-bootstrap/Button'
 import { useDispatch, useSelector } from 'react-redux';
 import VenueCard from "./VenueCard";
 import { faFileCirclePlus } from '@fortawesome/free-solid-svg-icons';
@@ -17,13 +16,12 @@ const ManageVenues = () => {
 
   return (
     <>
-      <h1>Manage Venues</h1>
-      <Button
+      <button
         className="venueButton"
         onClick={addVenueButton}
         variant="outline-primary">
-        <FontAwesomeIcon icon={faFileCirclePlus}/>Add a Venue
-      </Button>
+        <FontAwesomeIcon icon={faFileCirclePlus}/> Add a Venue
+      </button>
       <VenueForm />
 
       <div className="venueCards">

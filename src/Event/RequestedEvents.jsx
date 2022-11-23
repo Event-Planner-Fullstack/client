@@ -12,14 +12,11 @@ const RequestedEvent = () => {
 
   return (
     <>
-      <header>Requested Event</header>
-      <div className="eventCards">
-        {
-          filterEvents().map(event => (
-            <EventCard key={event.id} event={event} />
-          ))
-        }
-      </div>
+      {
+        filterEvents().map(event => (
+          <EventCard key={event.id} event={event} />
+        ))
+      }
     </>
   )
 }

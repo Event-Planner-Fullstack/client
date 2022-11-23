@@ -1,9 +1,71 @@
-.tab:hover {
-  cursor: pointer;
-  background-color: beige;
+.modal {
+  color: black;
+  border: 6px solid #9ED5C5;
+  background: rgba(234, 169, 103, 0.6);
+  border-radius: 10px;
 }
 
-.radio:hover {
-  cursor: pointer;
-  background-color: beige;
+.modal .modalHeader {
+  background-color: #9ED5C5;
 }
+
+.modal .modalBtn {
+  background-color: #9ED5C5;
+}
+
+.modal .modalNav {
+  background-color: #DEF5E5;
+}
+
+form {
+  background-color: #9ED5C5;
+}
+
+.modal .modalSignupBtn {
+  background-color: #9ED5C5;
+  margin: 10px;
+  border-color: #DEF5E5;
+  border-radius: 20px;
+  transition: .3s;
+}
+
+.modal .modalSignupBtn:hover {
+  transform: translateY(5px);
+}
+
+.modal .modalLoginBtn {
+  background-color: #9ED5C5;
+  margin: 10px;
+  border-color: #DEF5E5;
+  border-radius: 20px;
+  right: 25px;
+  transition: .3s;
+}
+
+.modal .modalLoginBtn:hover {
+  transform: translateY(5px);
+}
+
+
+form .formCheck {
+  position: relative;
+  display: block;
+  margin-left: 20px;
+}
+
+body .modalSubmitBtn {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: #DEF5E5;
+  border-color: #9ED5C5;
+  border-radius: 10px;
+  border-width: 6px;
+  right: 110px;
+  transition: .3s;
+  font-weight: 500;
+}
+
+.modalSubmitBtn:hover {
+  transform: translateY(5px);
+}
+

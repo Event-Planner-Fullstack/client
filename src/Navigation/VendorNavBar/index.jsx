@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import logo1 from './../img/table.png'
-import logo2 from './../img/tray-empty.svg';
-import logo3 from './../img/calendar.svg';
-import logo4 from './../img/settings.svg';
+import logo2 from './../img/settings.svg';
+import logo3 from './../img/tray-full.svg';
+import logo4 from './../img/calendar.svg';
 import './VendorNavBar.scss';
 
 const VendorNavBar = ({ setPage }) => {

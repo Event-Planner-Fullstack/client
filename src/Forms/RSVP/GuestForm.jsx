@@ -1,7 +1,7 @@
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import { useDispatch } from 'react-redux';
 import createGuest from './../../store/middleware/guestRSVP';
+import './RSVP.scss';
 
 const GuestForm = () => {
   const dispatch = useDispatch();
@@ -41,7 +41,7 @@ const GuestForm = () => {
       </Form.Group>
 
 
-      <Button variant="primary" type="submit">Submit</Button>
+      <button className="modalSubmitBtn" variant="primary" type="submit">Submit</button>
     </Form>
   )
 }

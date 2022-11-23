@@ -10,7 +10,6 @@ const UpcomingEvents = () => {
 
   return (
     <>
-      <h1>Upcoming Events</h1>
       <div className="upcomingCards">
         {
           filterEvents().map(event => (

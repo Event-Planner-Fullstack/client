@@ -9,7 +9,6 @@ const FindVenues = () => {
 
   return (
     <>
-      <header>Find Venues</header>
       <div className="findVenues">
         {
           venueList.map(venue => (
