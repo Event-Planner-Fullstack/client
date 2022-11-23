@@ -18,7 +18,6 @@ const Main = () => {
         <Login />
       </When>
 
-      <Template />
       <When condition={user.isAuthenticated && user.user.role === 'vendor'}>
         <Venue />
       </When>
