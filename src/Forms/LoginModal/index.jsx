@@ -45,13 +45,13 @@ const LoginForm = () => {
   return (
     <>
       <Modal show={modals.login_modal} onHide={closeModal}>
-        <Modal.Header closeButton ><Modal.Title>Login</Modal.Title></Modal.Header>
-        <Nav justify variant="tabs">
+        <Modal.Header className="modalHeader" closeButton ><Modal.Title >Login</Modal.Title></Modal.Header>
+        <Nav className="modalNav" justify variant="tabs">
           <Nav.Item>
-            <Nav.Item onClick={switchToLogin}>Login</Nav.Item>
+            <Nav.Item className="modalSignupBtn" onClick={switchToLogin}>Login</Nav.Item>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Item onClick={switchToSignup}>Signup</Nav.Item>
+            <Nav.Item className="modalLoginBtn" onClick={switchToSignup}>Signup</Nav.Item>
           </Nav.Item>
         </Nav>
 
@@ -71,7 +71,7 @@ const LoginForm = () => {
           </Form.Group>
 
           <When condition={modals.signup}>
-            <Form.Check
+            <Form.Check className="formCheck"
               inline
               type='radio'
               name='type'
@@ -79,7 +79,7 @@ const LoginForm = () => {
               value='vendor'
             />
 
-            <Form.Check
+            <Form.Check className="formCheck"
               inline
               type='radio'
               label='client'
@@ -88,7 +88,7 @@ const LoginForm = () => {
             />
           </When>
 
-          <Button type="submit" className="btn btn-primary m-3">Submit</Button>
+          <button type="submit" className="modalSubmitBtn">Submit</button>
         </Form>
       </Modal>
     </>

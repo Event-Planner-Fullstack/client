@@ -13,21 +13,20 @@ const Main = () => {
   return (
     <>
       <Header />
-{/* 
+
       <When condition={!user.isAuthenticated}>
-        <EmptyNav/>
         <Login />
-      </When> */}
+      </When>
 
-      {/* <Template/> */}
-      {/* <When condition={user.isAuthenticated && user.user.role === 'vendor'}> */}
+      <Template />
+      <When condition={user.isAuthenticated && user.user.role === 'vendor'}>
         <Venue />
-      {/* </When> */}
+      </When>
 
-      {/* <When condition={user.isAuthenticated && user.user.role === 'client'}> */}
-        {/* <Event /> */}
-      {/* </When> */}
-      <Footer/>
+      <When condition={user.isAuthenticated && user.user.role === 'client'}>
+        <Event />
+      </When>
+      <Footer />
     </>
   )
 }
