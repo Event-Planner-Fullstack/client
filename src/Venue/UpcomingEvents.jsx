@@ -10,7 +10,6 @@ const UpcomingEvents = () => {
 
   return (
     <>
-      <h1>Upcoming Events</h1>
       {
         filterEvents().map(event => (
           <PendingEvent key={event.id} event={event} />

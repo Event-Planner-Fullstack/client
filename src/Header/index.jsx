@@ -20,11 +20,11 @@ const Header = () => {
   return (
     <header>
       <When condition={!user.isAuthenticated}>
-        <button onClick={showLoginForm}>Login</button>
+        <button className="loginBtn" onClick={showLoginForm}>Login</button>
       </When>
 
       <When condition={user.isAuthenticated}>
-        <button onClick={logout}>Logout</button>
+        <button className="logoutBtn" onClick={logout}>Logout</button>
       </When>
       {/* <RSVP /> */}
     </header>

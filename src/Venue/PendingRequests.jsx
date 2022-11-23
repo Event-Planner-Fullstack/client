@@ -11,14 +11,11 @@ const PendingRequests = () => {
 
   return (
     <>
-      <h1>Pending Requests</h1>
-        <div className="pendingRequests">
-          {
-            filterEvents().map(event => (
-              <PendingEvent key={event.id} event={event} />
-            ))
-          }
-        </div>
+      {
+        filterEvents().map(event => (
+          <PendingEvent key={event.id} event={event} />
+        ))
+      }
     </>
   )
 }

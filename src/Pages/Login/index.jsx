@@ -1,15 +1,12 @@
 import React from 'react';
 import LoginModal from '../../Forms/LoginModal';
-import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import CarouselPage from '../../Carousel';
-import EmptyNavBar from './../../Navigation/EmptyNavBar';
-import RSVP from '../../Forms/RSVP'
-import '../../Body/Body.scss';
-import './Homepage.scss';
+import EmptyNavBar from '../../Navigation/EmptyNavBar';
+import RSVP from '../../Forms/RSVP';
+import './../Homepage/Homepage.scss'
 
-const Homepage = () => {
+const Login = () => {
 
   return (
     <>
@@ -23,8 +20,9 @@ const Homepage = () => {
       <Col xs={4} className="login">
         <LoginModal />
       </Col>
+
     </>
   );
 };
 
-export default Homepage;
+export default Login;

@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import { useSelector, useDispatch } from 'react-redux';
 import create from './../store/middleware/crud/create';
 import update from './../store/middleware/crud/update';
+import './Venue.scss';
 
 function VenueForm() {
   const dispatch = useDispatch();
@@ -53,11 +54,11 @@ function VenueForm() {
   return (
     <Modal show={modals.add_venue_modal || modals.edit_venue_modal} onHide={closeModal}>
 
-      <Modal.Header closeButton>
+      <Modal.Header className="modalHeader" closeButton>
         <Modal.Title>Venue Details</Modal.Title>
       </Modal.Header>
 
-      <Modal.Body>
+      <Modal.Body className="modalBody">
         <Form onSubmit={handleSubmit}>
 
           <Form.Group className="mb-3" controlId="venueName">
@@ -110,7 +111,7 @@ function VenueForm() {
             />
           </Form.Group>
 
-          <Button variant="primary" type="submit">Submit</Button>
+          <button class="modalSubmitBtn" variant="primary" type="submit">Submit</button>
 
         </Form>
       </Modal.Body>
