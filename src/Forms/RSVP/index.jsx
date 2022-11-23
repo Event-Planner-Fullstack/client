@@ -3,6 +3,8 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import GuestForm from './GuestForm';
+import RsvpSuccess from '../../Alerts/RsvpSuccess';
+import NoEventFound from '../../Alerts/NoEventFound';
 
 function RSVP() {
   const dispatch = useDispatch();
@@ -11,6 +13,7 @@ function RSVP() {
 
   const toggleModal = () => {
     dispatch({ type: 'guest_modal' });
+    dispatch({ type: 'change_rsvp_status', payload: { rsvpSuccess: false, rsvpError: false } });
   }
 
   return (
@@ -23,7 +26,10 @@ function RSVP() {
             <Modal.Title>RSVP to an Event</Modal.Title>
           </Modal.Header>
 
-          <Modal.Body><GuestForm toggleModal={toggleModal} /></Modal.Body>
+          <Modal.Body><GuestForm /></Modal.Body>
+
+          <RsvpSuccess />
+          <NoEventFound />
 
         </Modal>
 

@@ -6,12 +6,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import signup from '../../store/middleware/signup';
 import signin from '../../store/middleware/signin';
 import { When } from 'react-if';
-import './User.scss';
+import InvalidSignUp from '../../Alerts/InvalidSignUp';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
 
   const modals = useSelector(state => state.modals);
+  const error = useSelector(state => state.user.loginError);
 
   const switchToSignup = () => {
     dispatch({ type: 'toggle_login', payload: false });
@@ -25,6 +26,7 @@ const LoginForm = () => {
 
   const closeModal = () => {
     dispatch({ type: 'login_modal' });
+    dispatch({ type: 'change_error_status', payload: false });
   }
 
   const handleSubmit = (e) => {
@@ -35,11 +37,16 @@ const LoginForm = () => {
       password: e.target.exampleInputPassword1.value,
     };
 
-    if (modals.signup) {
-      userDetails.role = e.target.type.value;
-      dispatch(signup(userDetails));
+    try {
+      if (modals.signup) {
+        userDetails.role = e.target.type.value;
+        dispatch(signup(userDetails));
+      }
+      else dispatch(signin(userDetails));
+      // closeModal();
+    } catch (e) {
+      console.log(e);
     }
-    else dispatch(signin(userDetails));
   }
 
   return (
@@ -93,6 +100,7 @@ const LoginForm = () => {
 
           <Button type="submit" className="btn btn-primary m-3">Submit</Button>
         </Form>
+        <InvalidSignUp />
       </Modal>
     </>
   );

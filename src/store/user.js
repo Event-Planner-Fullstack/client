@@ -19,8 +19,9 @@ const reducer = (state = initialState, action) => {
       state = initialState;
       return state;
     case 'change_error_status':
-      const status = state.loginError ? false : true;
-      state = { ...state, }
+      const status = action.payload;
+      state = { ...state, loginError: status}
+      return state;
     default: return state
   }
 }

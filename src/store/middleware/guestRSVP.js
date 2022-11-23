@@ -3,7 +3,10 @@ import axios from 'axios';
 function getCreatePayload(obj) {
   const action = {
     type: `create_${obj.item}`,
-    payload: obj
+    payload: {
+      rsvpSuccess: true,
+      rsvpError: false,
+    },
   }
   return action;
 }
@@ -26,7 +29,7 @@ function createGuest(endpoint, guestObj) {
       const createdGuest = await createRequest(endpoint, guestObj);
       return dispatch(getCreatePayload(createdGuest));
     } catch (e) {
-      return console.log(e);
+      return dispatch({ type: 'change_rsvp_status', payload: {rsvpSuccess: false, rsvpError: true,} });
     }
   }
 }
