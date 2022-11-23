@@ -14,12 +14,10 @@ const EmptyNavBar = () => {
         </ul>
         <div className="emptyNavLogo">
           <li className="emptyLi">
-            <a href="#">
               <span className="tempLogo">
                 <img src={logo1} />
               </span>
               <span className="emptyLogo"> Home </span>
-            </a>
           </li>
         </div>
       </div >
