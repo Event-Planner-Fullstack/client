@@ -1,6 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useDispatch, useSelector } from 'react-redux';
+import { faShare } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import EventForm from './EventForm';
 
 const VenueCard = ({ venue }) => {
@@ -24,7 +26,11 @@ const VenueCard = ({ venue }) => {
           <Card.Text>Security: {venue.security}, Cater: {venue.cater}</Card.Text>
           <Card.Text>Contact: {venue.pocName} at {venue.pocNumber} </Card.Text>
 
-          <Button variant="primary" onClick={() => requestEvent(venue)}>Request Event</Button>
+          <Button
+            variant="outline-primary"
+            onClick={() => requestEvent(venue)}>
+            <FontAwesomeIcon icon={faShare}/>Request Event
+          </Button>
 
         </Card.Body>
       </Card>
@@ -32,5 +38,7 @@ const VenueCard = ({ venue }) => {
     </>
   );
 }
+
+// <FontAwesomeIcon icon="fa-duotone fa-mailbox-flag-up" />
 
 export default VenueCard;
