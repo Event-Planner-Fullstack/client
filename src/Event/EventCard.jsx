@@ -38,7 +38,6 @@ const EventCard = ({ event }) => {
 
         <When condition={event.confirmed}>
           <Button onClick={() => viewGuestList(event.id)}>View Guest List</Button>
-          <Button>Venue Details</Button>
         </When>
 
       </Card>

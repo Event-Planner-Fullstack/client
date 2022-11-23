@@ -24,7 +24,7 @@ async function createUser (auth) {
     }
     const response = await axios(config);
     return response.data;
-  } catch (e) { console.log(e) }
+  } catch (e) { console.log('sign up error') }
 }
 
 
@@ -35,7 +35,7 @@ function signup(auth) {
       const user = await createUser(auth);
       return dispatch(getSignUpPayload(user));
     } catch (e) {
-      return console.log(e);
+      return dispatch({ type: 'change_error_status', payload: true });
     }
   }
 }
