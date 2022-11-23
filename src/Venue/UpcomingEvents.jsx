@@ -10,11 +10,13 @@ const UpcomingEvents = () => {
 
   return (
     <>
-      {
-        filterEvents().map(event => (
-          <PendingEvent key={event.id} event={event} />
-        ))
-      }
+      <div className="upcomingCards">
+        {
+          filterEvents().map(event => (
+            <PendingEvent key={event.id} event={event} />
+          ))
+        }
+      </div>
     </>
   )
 }

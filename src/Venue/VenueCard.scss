@@ -13,6 +13,15 @@
   align-content: space-around;
 }
 
+.upcomingCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-around;
+}
+
 .venueButton {
   margin-left: 25px;
 }

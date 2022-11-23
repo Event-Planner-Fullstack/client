@@ -34,7 +34,7 @@ const PendingEvent = ({ event }) => {
           <Button
             variant="outline-primary"
             onClick={() => confirmEvent(event)}>
-              <FontAwesomeIcon icon={faCircleCheck}/>Confirm</Button>
+            <FontAwesomeIcon icon={faCircleCheck}/>Confirm</Button>
         }
 
       </Card>
