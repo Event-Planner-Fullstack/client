@@ -9,7 +9,7 @@
     left: 60px;
   }
   
-  .logo img {
+  .tempLogo img {
     position: absolute;
     top: -25px;
     left: 20px;
@@ -20,16 +20,16 @@
     z-index: 2;
   }
   
-  .navigationLogo li {
+  .emptyNavLogo li {
     list-style: none;
     opacity: 1;
   }
   
-  .navigation .navigationLogo li .logo img {
+  .emptyNav .emptyNavLogo li .tempLogo img {
     @include bigLogo();
   }
   
-  .indicator {
+  .emptyIndicator {
     position: absolute;
     top: 0px;
     left: 50px;;
@@ -42,7 +42,7 @@
   }
   
   
-  .navigation {
+  .emptyNav {
     display: flex;
     position:relative;
     width: 90%;

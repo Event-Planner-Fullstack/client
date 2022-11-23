@@ -17,13 +17,12 @@ const ManageVenues = () => {
 
   return (
     <>
-      <h1>Manage Venues</h1>
-      <Button
+      <button
         className="venueButton"
         onClick={addVenueButton}
         variant="outline-primary">
-        <FontAwesomeIcon icon={faFileCirclePlus}/>Add a Venue
-      </Button>
+        <FontAwesomeIcon icon={faFileCirclePlus}/> Add a Venue
+      </button>
       <VenueForm />
 
       <div className="venueCards">

@@ -11,7 +11,6 @@ const RequestedEvent = () => {
 
   return (
     <>
-      <header>Requested Event</header>
       {
         filterEvents().map(event => (
           <EventCard key={event.id} event={event} />

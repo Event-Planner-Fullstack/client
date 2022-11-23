@@ -1,11 +1,15 @@
-body {
+html {
     background-color: peachpuff;
 }
 
+html body {
+    background-color: peachpuff; 
+}
+
 body .info {
-    margin-top:-5px;
+    margin-top: 10px;
     margin-bottom: 10px;
-    min-height: 600px;
+    min-height: 800px;
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;

@@ -5,25 +5,29 @@ import { useSelector } from 'react-redux';
 import Venue from './Venue';
 import Event from './Event';
 import EmptyNav from './Navigation/EmptyNavBar';
+import Template from './Pages/Template';
+import Footer from './Footer';
 
 const Main = () => {
   const user = useSelector(state => state.user);
   return (
     <>
       <Header />
-
+{/* 
       <When condition={!user.isAuthenticated}>
         <EmptyNav/>
         <Login />
-      </When>
+      </When> */}
 
-      <When condition={user.isAuthenticated && user.user.role === 'vendor'}>
+      {/* <Template/> */}
+      {/* <When condition={user.isAuthenticated && user.user.role === 'vendor'}> */}
         <Venue />
-      </When>
+      {/* </When> */}
 
-      <When condition={user.isAuthenticated && user.user.role === 'client'}>
-        <Event />
-      </When>
+      {/* <When condition={user.isAuthenticated && user.user.role === 'client'}> */}
+        {/* <Event /> */}
+      {/* </When> */}
+      <Footer/>
     </>
   )
 }

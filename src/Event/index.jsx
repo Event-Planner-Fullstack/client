@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { When } from 'react-if';
 import { useSelector, useDispatch } from 'react-redux';
-import Button from 'react-bootstrap/Button';
 import ClientNavBar from '../Navigation/ClientNavBar';
 import ConfirmedEvents from './ConfirmedEvents';
 import FindVenues from './FindVenues';
 import RequestedEvents from './RequestedEvents';
 import readAll from './../store/middleware/crud/readAll';
+import Footer from '../Footer';
+import "./Event.scss";
 
 
 const Event = () => {
@@ -30,9 +31,8 @@ const Event = () => {
 
       <ClientNavBar setPage={setPage} />
 
-      <Button onClick={refresh}>Refresh</Button>
-
       <body>
+        <button className="eventBtn" onClick={refresh}>Refresh</button>
         <div class="info">
           <When condition={page === 'find-venues'}><FindVenues /></When>
 

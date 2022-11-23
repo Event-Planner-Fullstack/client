@@ -1,17 +1,16 @@
 'use strict';
 
-import Header from '../../Header';
-import Body from '../../Body';
-import VendorNavBar from '../../Navigation/VendorNavBar';
+// import Header from '../../Header';
+import EmptyNavBar from '../../Navigation/EmptyNavBar';
+import '../../Body/Body.scss';
 
 const Template = () => {
 
   return (
     <>
-    <Header/>
-      <VendorNavBar/>
-      <Body/>
-    </>
+      <EmptyNavBar/>
+      <body>fsdaf</body>
+      </>
   );
 };
 

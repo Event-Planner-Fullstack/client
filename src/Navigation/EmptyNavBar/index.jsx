@@ -8,17 +8,17 @@ const EmptyNavBar = () => {
 
   return (
     <>
-      <div className="navigation">
+      <div className="emptyNav">
         <ul>
-          <div className="indicator"></div>
+          <div className="emptyIndicator"></div>
         </ul>
-        <div className="navigationLogo">
-          <li className="hi">
+        <div className="emptyNavLogo">
+          <li className="emptyLi">
             <a href="#">
-              <span className="logo">
+              <span className="tempLogo">
                 <img src={logo1} />
               </span>
-              <span className="text"> Home </span>
+              <span className="emptyLogo"> Home </span>
             </a>
           </li>
         </div>

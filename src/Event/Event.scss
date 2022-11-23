@@ -1,0 +1,17 @@
+body .eventBtn {
+    position: absolute;
+    margin-top: 25px;
+    margin-right: 5%;
+    background-color: #DEF5E5;
+    border-color: #9ED5C5;
+    border-radius: 10px;
+    border-width: 6px;
+    right: 25px;
+    transition: .3s;
+    font-weight: 500;
+}
+
+.eventBtn:hover {
+    transform: translateY(5px);
+}
+

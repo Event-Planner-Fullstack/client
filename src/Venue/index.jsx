@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import { When } from 'react-if';
 import { useDispatch, useSelector } from 'react-redux';
-import Button from 'react-bootstrap/Button';
 import ManageVenues from './ManageVenues';
 import PendingRequests from './PendingRequests';
 import UpcomingEvents from './UpcomingEvents';
 import VendorNavBar from '../Navigation/VendorNavBar';
 import readAll from './../store/middleware/crud/readAll';
-import './../Body/Body.scss';
+import "./Venue.scss";
 
 
 const Venue = () => {
@@ -15,7 +14,7 @@ const Venue = () => {
 
   const user = useSelector(state => state.user.user);
 
-  const [page, setPage] = useState('manage-venues');
+  const [page, setPage] = useState('home');
 
   const refresh = () => {
     dispatch(readAll(user.token, `venue/user/${user.id}`));
@@ -30,9 +29,9 @@ const Venue = () => {
     <>
 
       <VendorNavBar setPage={setPage} />
-      <Button onClick={refresh}>Refresh</Button>
 
       <body>
+        <button className="eventBtn" onClick={refresh}>Refresh</button>
         <div class="info">
 
           <When condition={page === 'manage-venues'}><ManageVenues /></When>
@@ -42,7 +41,6 @@ const Venue = () => {
           <When condition={page === 'upcoming-events'}><UpcomingEvents /></When>
         </div>
       </body>
-
 
     </>
   )

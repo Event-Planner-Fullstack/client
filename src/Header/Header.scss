@@ -10,3 +10,37 @@ header {
     border-top-right-radius: 10px;
     z-index: 1;
 }
+
+.loginBtn {
+    position: absolute;
+    background-color: #DEF5E5;
+    border-color: #9ED5C5;
+    border-width: 3px;
+    border-radius: 10px;
+    font-size: 12px;
+    top: 3px;
+    right: 10px;
+    transition: .3s;
+    font-weight: 500;
+}
+
+.loginBtn:hover {
+    transform: translateY(5px);
+}
+
+.logoutBtn {
+    position: absolute;
+    background-color: #DEF5E5;
+    border-color: #9ED5C5;
+    border-width: 3px;
+    border-radius: 10px;
+    font-size: 12px;
+    top: 3px;
+    right: 10px;
+    transition: .3s;
+    font-weight: 500;
+}
+
+.loginBtn:hover {
+    transform: translateY(5px);
+}
